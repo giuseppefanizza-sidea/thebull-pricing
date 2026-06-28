@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/design-system.css">
+ <link rel="stylesheet" href="../assets/css/mobile-menu.css">
 </head>
 <body>
 
@@ -33,7 +34,7 @@
           <a href="../ro/contacte.html">RO</a>
         </div>
         <a href="contatti.html" class="btn btn--primary btn--small">Request a quote</a>
-        <button class="menu-toggle" aria-label="Open menu">
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
           </svg>
@@ -41,6 +42,30 @@
       </div>
     </div>
   </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu__header">
+      <a href="../index.html" class="site-header__logo">
+        <img src="https://www.ferramati.ro/wp-content/uploads/2023/08/ferramati-logo-int_004.svg" alt="Ferramati International" style="filter: brightness(0) invert(1); height: 34px;">
+      </a>
+      <button class="mobile-menu__close" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="4" x2="16" y2="16"/><line x1="16" y1="4" x2="4" y2="16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu__nav" aria-label="Mobile navigation">
+      <a href="../index.html#group">Group</a>
+      <a href="../index.html#products">Products</a>
+      <a href="../index.html#solutions">Solutions</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#technical">Technical area</a>
+      <a href="contatti.html">Contact</a>
+    </nav>
+    <div class="mobile-menu__footer">
+      <div class="lang-switcher"><a href="../it/index.html">IT</a><span class="sep">/</span><a href="../index.html" class="active">EN</a><span class="sep">/</span><a href="../ro/index.html">RO</a></div>
+      <a href="contatti.html" class="btn btn--primary" style="width:100%; justify-content:center;">Request a quote</a>
+    </div>
+  </div>
 
   <!-- BREADCRUMB -->
   <nav class="breadcrumb">
@@ -217,5 +242,6 @@
     </div>
   </footer>
 
+ <script src="../assets/js/mobile-menu.js"></script>
 </body>
 </html>

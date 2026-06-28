@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/design-system.css">
   <link rel="stylesheet" href="assets/css/hero-engineering.css">
+  <link rel="stylesheet" href="assets/css/mobile-menu.css">
 </head>
 <body>
 
@@ -38,7 +39,7 @@
           <a href="ro/index.html">RO</a>
         </div>
         <a href="en/contatti.html" class="btn btn--primary btn--sm">Request a quote</a>
-        <button class="menu-toggle" aria-label="Open menu">
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
             <line x1="2" y1="5" x2="18" y2="5"/>
             <line x1="2" y1="10" x2="18" y2="10"/>
@@ -48,6 +49,41 @@
       </div>
     </div>
   </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu__header">
+      <a href="index.html" class="site-header__logo">
+        <img src="https://www.ferramati.ro/wp-content/uploads/2023/08/ferramati-logo-int_004.svg"
+             alt="Ferramati International"
+             style="filter: brightness(0) invert(1); height: 34px;">
+      </a>
+      <button class="mobile-menu__close" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="4" y1="4" x2="16" y2="16"/>
+          <line x1="16" y1="4" x2="4" y2="16"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-menu__nav" aria-label="Mobile navigation">
+      <a href="#group">Group</a>
+      <a href="#products">Products</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#projects">Projects</a>
+      <a href="#technical">Technical area</a>
+      <a href="en/contatti.html">Contact</a>
+    </nav>
+    <div class="mobile-menu__footer">
+      <div class="lang-switcher">
+        <a href="it/index.html">IT</a>
+        <span class="sep">/</span>
+        <a href="index.html" class="active">EN</a>
+        <span class="sep">/</span>
+        <a href="ro/index.html">RO</a>
+      </div>
+      <a href="en/contatti.html" class="btn btn--primary" style="width:100%; justify-content:center;">Request a quote</a>
+    </div>
+  </div>
 
   <!-- HERO -->
   <section class="hero" id="group">
@@ -466,6 +502,9 @@
       </div>
     </div>
   </footer>
+
+  <script src="assets/js/hero-animations.js"></script>
+  <script src="assets/js/mobile-menu.js"></script>
 
 </body>
 </html>

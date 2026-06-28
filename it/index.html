@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/design-system.css">
+ <link rel="stylesheet" href="../assets/css/mobile-menu.css">
 </head>
 <body>
 
@@ -37,7 +38,7 @@
           <a href="../ro/index.html">RO</a>
         </div>
         <a href="contatti.html" class="btn btn--primary btn--sm">Richiedi preventivo</a>
-        <button class="menu-toggle" aria-label="Apri menu">
+        <button class="menu-toggle" aria-label="Apri menu" aria-expanded="false" aria-controls="mobile-menu">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
             <line x1="2" y1="5" x2="18" y2="5"/>
             <line x1="2" y1="10" x2="18" y2="10"/>
@@ -47,6 +48,30 @@
       </div>
     </div>
   </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu__header">
+      <a href="index.html" class="site-header__logo">
+        <img src="https://www.ferramati.ro/wp-content/uploads/2023/08/ferramati-logo-int_004.svg" alt="Ferramati" style="filter: brightness(0) invert(1); height: 34px;">
+      </a>
+      <button class="mobile-menu__close" aria-label="Chiudi menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="4" x2="16" y2="16"/><line x1="16" y1="4" x2="4" y2="16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu__nav" aria-label="Navigazione mobile">
+      <a href="#gruppo">Gruppo</a>
+      <a href="#prodotti">Prodotti</a>
+      <a href="#soluzioni">Soluzioni</a>
+      <a href="#realizzazioni">Realizzazioni</a>
+      <a href="#area-tecnica">Area tecnica</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+    <div class="mobile-menu__footer">
+      <div class="lang-switcher"><a href="index.html" class="active">IT</a><span class="sep">/</span><a href="../index.html">EN</a><span class="sep">/</span><a href="../ro/index.html">RO</a></div>
+      <a href="contatti.html" class="btn btn--primary" style="width:100%; justify-content:center;">Richiedi preventivo</a>
+    </div>
+  </div>
 
   <!-- HERO — Split layout -->
   <section class="hero" id="gruppo">
@@ -461,5 +486,6 @@
     </div>
   </footer>
 
+ <script src="../assets/js/mobile-menu.js"></script>
 </body>
 </html>

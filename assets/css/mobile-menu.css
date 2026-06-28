@@ -1,0 +1,94 @@
+/* ============================================
+   MOBILE MENU — Fullscreen overlay
+   ============================================ */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background-color: var(--forge-black);
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--pad-mob);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity var(--t-std) var(--ease),
+              transform var(--t-std) var(--ease),
+              visibility 0s linear var(--t-std);
+}
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity var(--t-std) var(--ease),
+              transform var(--t-std) var(--ease),
+              visibility 0s linear 0s;
+}
+
+.mobile-menu__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+.mobile-menu__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--steel-400);
+  transition: color var(--t-fast) var(--ease);
+}
+.mobile-menu__close:hover { color: var(--pure-white); }
+
+.mobile-menu__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+  justify-content: center;
+  padding: var(--s-xl) 0;
+}
+.mobile-menu__nav a {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-weight: 600;
+  color: var(--steel-200);
+  padding: var(--s-md) 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: color var(--t-fast) var(--ease);
+}
+.mobile-menu__nav a:first-child {
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.mobile-menu__nav a:hover {
+  color: var(--color-safety-orange);
+}
+
+.mobile-menu__footer {
+  flex-shrink: 0;
+  padding: var(--s-xl) 0 var(--s-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-lg);
+  align-items: center;
+}
+.mobile-menu__footer .lang-switcher {
+  font-size: var(--fs-sm);
+}
+
+/* Hide mobile menu on desktop */
+@media (min-width: 1024px) {
+  .mobile-menu { display: none; }
+}
+
+/* Body scroll lock when menu is open */
+body.menu-open {
+  overflow: hidden;
+}

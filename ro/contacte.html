@@ -7,7 +7,7 @@
   <meta name="description" content="Contactează Ferramati International pentru oferte, suport tehnic sau informații despre produse. Unități la Timișoara și Oradea.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/design-system.css">
  <link rel="stylesheet" href="../assets/css/mobile-menu.css">
 </head>
@@ -73,23 +73,23 @@
     <div class="container">
       <a href="index.html">Acasă</a>
       <span>/</span>
-      <span style="color: var(--color-graphite-steel);">Contact</span>
+      <span style="color: var(--steel-600);">Contact</span>
     </div>
   </nav>
 
   <!-- CONTACT SECTION -->
-  <section class="section" style="padding-top: var(--space-xl);">
+  <section class="contact-section">
     <div class="container">
-      <div class="grid grid-2" style="align-items: start; gap: var(--space-3xl);">
+      <div class="contact-grid">
         
         <!-- FORM -->
         <div>
           <p class="eyebrow mb-md">Contactează-ne</p>
-          <h1 style="margin-bottom: var(--space-md);">Solicită ofertă sau suport tehnic</h1>
-          <p style="color: var(--color-steel-grey); margin-bottom: var(--space-2xl); max-width: 480px;">Poți atașa planuri tehnice, metraje sau documentație de proiect. Echipa Ferramati va analiza cererea și te va contacta.</p>
+          <h1 class="mb-md">Solicită ofertă sau suport tehnic</h1>
+          <p class="contact-form__intro">Poți atașa planuri tehnice, metraje sau documentație de proiect. Echipa Ferramati va analiza cererea și te va contacta.</p>
           
           <form action="#" method="post">
-            <div class="grid grid-2">
+            <div class="form-row">
               <div class="form-group">
                 <label for="nume">Nume complet *</label>
                 <input type="text" id="nume" name="nume" required placeholder="Ion Popescu">
@@ -99,7 +99,7 @@
                 <input type="text" id="firma" name="firma" required placeholder="Construcții S.R.L.">
               </div>
             </div>
-            <div class="grid grid-2">
+            <div class="form-row">
               <div class="form-group">
                 <label for="email">Email *</label>
                 <input type="email" id="email" name="email" required placeholder="ion@firma.ro">
@@ -109,7 +109,7 @@
                 <input type="tel" id="telefon" name="telefon" placeholder="+40 700 000 000">
               </div>
             </div>
-            <div class="grid grid-2">
+            <div class="form-row">
               <div class="form-group">
                 <label for="regiune">Regiune *</label>
                 <select id="regiune" name="regiune" required>
@@ -155,13 +155,13 @@
               <label for="fisier">Atașamente (PDF, DWG, ZIP — max 20MB)</label>
               <input type="file" id="fisier" name="fisier" accept=".pdf,.dwg,.dxf,.zip,.rar,.jpg,.png" multiple>
             </div>
-            <div class="form-group" style="display: flex; align-items: flex-start; gap: var(--space-sm);">
-              <input type="checkbox" id="gdpr" name="gdpr" required style="margin-top: 4px; width: auto;">
-              <label for="gdpr" style="font-size: var(--font-size-small); color: var(--color-steel-grey);">
+            <div class="form-group" class="form-group--checkbox">
+              <input type="checkbox" id="gdpr" name="gdpr" required >
+              <label for="gdpr" >
                 Sunt de acord cu prelucrarea datelor personale conform GDPR. Citește <a href="#" style="color: var(--color-safety-orange); text-decoration: underline;">Politica de confidențialitate</a>. *
               </label>
             </div>
-            <button type="submit" class="btn btn--primary" style="margin-top: var(--space-md);">Trimite cererea</button>
+            <button type="submit" class="btn btn--primary" >Trimite cererea</button>
           </form>
         </div>
 
@@ -169,7 +169,7 @@
         <div>
           <p class="eyebrow mb-md">Locațiile noastre</p>
           <h2 class="mb-2xl">Unde ne găsești</h2>
-          <div style="display: flex; flex-direction: column; gap: var(--space-xl);">
+          <div class="location-list">
             <div class="service-item">
               <p class="eyebrow mb-sm">România — Producție</p>
               <h4 class="service-item__title">Timișoara, România</h4>

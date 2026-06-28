@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Solicită ofertă | Ferramati International</title>
+  <meta name="description" content="Contactează Ferramati International pentru oferte, suport tehnic sau informații despre produse. Unități la Timișoara și Oradea.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/design-system.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="site-header__logo">
+        <img src="https://www.ferramati.ro/wp-content/uploads/2023/08/ferramati-logo-int_004.svg" alt="Ferramati International" height="36">
+      </a>
+      <nav class="site-header__nav" aria-label="Navigare principală">
+        <a href="index.html#grup">Grup</a>
+        <a href="index.html#produse">Produse</a>
+        <a href="index.html#solutii">Soluții</a>
+        <a href="index.html#realizari">Realizări</a>
+        <a href="index.html#zona-tehnica">Zona tehnică</a>
+        <a href="contacte.html">Contact</a>
+      </nav>
+      <div class="site-header__actions">
+        <div class="lang-switcher" aria-label="Selector de limbă">
+          <a href="../it/contatti.html">IT</a>
+          <a href="../en/contatti.html">EN</a>
+          <a href="contacte.html" class="active">RO</a>
+        </div>
+        <a href="contacte.html" class="btn btn--primary btn--small">Solicită ofertă</a>
+        <button class="menu-toggle" aria-label="Deschide meniu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb">
+    <div class="container">
+      <a href="index.html">Acasă</a>
+      <span>/</span>
+      <span style="color: var(--color-graphite-steel);">Contact</span>
+    </div>
+  </nav>
+
+  <!-- CONTACT SECTION -->
+  <section class="section" style="padding-top: var(--space-xl);">
+    <div class="container">
+      <div class="grid grid-2" style="align-items: start; gap: var(--space-3xl);">
+        
+        <!-- FORM -->
+        <div>
+          <p class="eyebrow mb-md">Contactează-ne</p>
+          <h1 style="margin-bottom: var(--space-md);">Solicită ofertă sau suport tehnic</h1>
+          <p style="color: var(--color-steel-grey); margin-bottom: var(--space-2xl); max-width: 480px;">Poți atașa planuri tehnice, metraje sau documentație de proiect. Echipa Ferramati va analiza cererea și te va contacta.</p>
+          
+          <form action="#" method="post">
+            <div class="grid grid-2">
+              <div class="form-group">
+                <label for="nume">Nume complet *</label>
+                <input type="text" id="nume" name="nume" required placeholder="Ion Popescu">
+              </div>
+              <div class="form-group">
+                <label for="firma">Firma *</label>
+                <input type="text" id="firma" name="firma" required placeholder="Construcții S.R.L.">
+              </div>
+            </div>
+            <div class="grid grid-2">
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required placeholder="ion@firma.ro">
+              </div>
+              <div class="form-group">
+                <label for="telefon">Telefon</label>
+                <input type="tel" id="telefon" name="telefon" placeholder="+40 700 000 000">
+              </div>
+            </div>
+            <div class="grid grid-2">
+              <div class="form-group">
+                <label for="regiune">Regiune *</label>
+                <select id="regiune" name="regiune" required>
+                  <option value="">Selectează regiunea</option>
+                  <option value="vest">România — Vest (Timiș, Bihor, Arad)</option>
+                  <option value="centru">România — Centru</option>
+                  <option value="sud">România — Sud</option>
+                  <option value="nord">România — Nord</option>
+                  <option value="italia">Italia</option>
+                  <option value="international">Internațional</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="tip-cerere">Tip cerere *</label>
+                <select id="tip-cerere" name="tip-cerere" required>
+                  <option value="">Selectează tipul</option>
+                  <option value="oferta">Cerere de ofertă</option>
+                  <option value="tehnic">Suport tehnic / proiectare</option>
+                  <option value="fise">Fișe tehnice / documentație</option>
+                  <option value="informatii">Informații generale</option>
+                  <option value="parteneriat">Parteneriat / colaborare</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="produs">Produs de interes</label>
+              <select id="produs" name="produs">
+                <option value="">Selectează produsul (opțional)</option>
+                <option value="otel-fasonat">Oțel fasonat și asamblat</option>
+                <option value="fercass">FERCASS</option>
+                <option value="placi-tralicciata">Plăci tralicciata</option>
+                <option value="placi-duble">Plăci duble</option>
+                <option value="grinzi">Grinzi tralicciata</option>
+                <option value="eps">Elemente EPS</option>
+                <option value="furnizare-integrata">Furnizare integrată (oțel + prefabricate)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mesaj">Mesaj *</label>
+              <textarea id="mesaj" name="mesaj" required placeholder="Descrie proiectul, cantitățile estimate sau cererea specifică..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="fisier">Atașamente (PDF, DWG, ZIP — max 20MB)</label>
+              <input type="file" id="fisier" name="fisier" accept=".pdf,.dwg,.dxf,.zip,.rar,.jpg,.png" multiple>
+            </div>
+            <div class="form-group" style="display: flex; align-items: flex-start; gap: var(--space-sm);">
+              <input type="checkbox" id="gdpr" name="gdpr" required style="margin-top: 4px; width: auto;">
+              <label for="gdpr" style="font-size: var(--font-size-small); color: var(--color-steel-grey);">
+                Sunt de acord cu prelucrarea datelor personale conform GDPR. Citește <a href="#" style="color: var(--color-safety-orange); text-decoration: underline;">Politica de confidențialitate</a>. *
+              </label>
+            </div>
+            <button type="submit" class="btn btn--primary" style="margin-top: var(--space-md);">Trimite cererea</button>
+          </form>
+        </div>
+
+        <!-- LOCATII -->
+        <div>
+          <p class="eyebrow mb-md">Locațiile noastre</p>
+          <h2 class="mb-2xl">Unde ne găsești</h2>
+          <div style="display: flex; flex-direction: column; gap: var(--space-xl);">
+            <div class="service-item">
+              <p class="eyebrow mb-sm">România — Producție</p>
+              <h4 class="service-item__title">Timișoara, România</h4>
+              <p class="service-item__desc">Jud. Timiș<br><strong>Tel:</strong> +40 000 000 000<br><strong>Email:</strong> info@ferramati.ro</p>
+            </div>
+            <div class="service-item">
+              <p class="eyebrow mb-sm">România — Producție</p>
+              <h4 class="service-item__title">Oradea, România</h4>
+              <p class="service-item__desc">Jud. Bihor<br><strong>Tel:</strong> +40 000 000 000<br><strong>Email:</strong> info@ferramati.ro</p>
+            </div>
+            <div class="service-item">
+              <p class="eyebrow mb-sm">Italia — Producție oțel</p>
+              <h4 class="service-item__title">Fasano (BR), Italia</h4>
+              <p class="service-item__desc">Via Giambattista Di Tano<br>72015 Fasano (BR)<br><strong>Email:</strong> info@ferramati.it</p>
+            </div>
+            <div class="service-item">
+              <p class="eyebrow mb-sm">Italia — Sediu comercial</p>
+              <h4 class="service-item__title">Verdello (BG), Italia</h4>
+              <p class="service-item__desc">24049 Verdello (BG)<br><strong>Email:</strong> info@ferramati.it</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="https://www.ferramati.ro/wp-content/uploads/2023/08/ferramati-logo-int_004.svg" alt="Ferramati International" height="32" style="filter: brightness(0) invert(1);">
+          <p>Partener tehnic pentru construcții civile și industriale. Oțel fasonat, prefabricate din beton armat și sisteme EPS.</p>
+        </div>
+        <div>
+          <h4>Produse</h4>
+          <ul>
+            <li><a href="#">Oțel fasonat</a></li>
+            <li><a href="#">FERCASS</a></li>
+            <li><a href="#">Plăci tralicciata</a></li>
+            <li><a href="#">Plăci duble</a></li>
+            <li><a href="#">Elemente EPS</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Companie</h4>
+          <ul>
+            <li><a href="#">Despre noi</a></li>
+            <li><a href="#">Unități</a></li>
+            <li><a href="#">Certificări</a></li>
+            <li><a href="#">Cariere</a></li>
+            <li><a href="#">Știri</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Locații</h4>
+          <ul>
+            <li><a href="#">Timișoara, România</a></li>
+            <li><a href="#">Oradea, România</a></li>
+            <li><a href="#">Fasano (BR), Italia</a></li>
+            <li><a href="#">Verdello (BG), Italia</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>&copy; 2026 Ferramati International S.r.l. Toate drepturile rezervate.</span>
+        <div class="lang-switcher">
+          <a href="../it/contatti.html">IT</a>
+          <a href="../en/contatti.html">EN</a>
+          <a href="contacte.html" class="active">RO</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

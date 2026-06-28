@@ -1,0 +1,127 @@
+/* ============================================
+   LOGO CAROUSEL — Infinite scroll strip
+   Social proof: partner / clienti
+   ============================================ */
+
+.logo-carousel {
+  padding: var(--s-2xl) 0;
+  background: var(--pure-white);
+  border-top: 1px solid var(--steel-200);
+  border-bottom: 1px solid var(--steel-200);
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-carousel__label {
+  text-align: center;
+  margin-bottom: var(--s-xl);
+}
+.logo-carousel__label p {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-label);
+  color: var(--steel-400);
+}
+
+/* Track — the scrolling container */
+.logo-carousel__track {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3xl);
+  width: max-content;
+  animation: logoScroll 35s linear infinite;
+}
+
+.logo-carousel__track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes logoScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Individual logo item */
+.logo-carousel__item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  opacity: 0.45;
+  filter: grayscale(100%);
+  transition: opacity var(--t-std) var(--ease), filter var(--t-std) var(--ease);
+}
+
+.logo-carousel__item:hover {
+  opacity: 0.85;
+  filter: grayscale(0%);
+}
+
+.logo-carousel__item svg {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+.logo-carousel__item img {
+  height: 28px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Fade edges */
+.logo-carousel__track-wrapper {
+  position: relative;
+}
+.logo-carousel__track-wrapper::before,
+.logo-carousel__track-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+.logo-carousel__track-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--pure-white) 0%, transparent 100%);
+}
+.logo-carousel__track-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--pure-white) 0%, transparent 100%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .logo-carousel {
+    padding: var(--s-xl) 0;
+  }
+  .logo-carousel__track {
+    gap: var(--s-2xl);
+    animation-duration: 25s;
+  }
+  .logo-carousel__item svg,
+  .logo-carousel__item img {
+    height: 22px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .logo-carousel__track {
+    animation: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--s-2xl);
+    width: auto;
+  }
+  .logo-carousel__track-wrapper::before,
+  .logo-carousel__track-wrapper::after {
+    display: none;
+  }
+}

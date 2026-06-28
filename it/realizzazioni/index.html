@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Realizzazioni — Progetti e cantieri | Ferramati</title>
+  <meta name="description" content="Case study e realizzazioni Ferramati: forniture strutturali per edilizia residenziale, industriale, commerciale e infrastrutture in Italia e Romania.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/design-system.css">
+  <link rel="stylesheet" href="../../assets/css/mobile-menu.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="site-header__logo">
+        <img src="https://www.ferramati.ro/wp-content/uploads/2023/08/ferramati-logo-int_004.svg" alt="Ferramati" style="filter: brightness(0) invert(1);">
+      </a>
+      <nav class="site-header__nav" aria-label="Navigazione principale">
+        <a href="../chi-siamo.html">Chi siamo</a>
+        <a href="../prodotti/index.html">Prodotti</a>
+        <a href="../index.html#soluzioni">Soluzioni</a>
+        <a href="../realizzazioni/index.html">Realizzazioni</a>
+        <a href="../news/index.html">News</a>
+        <a href="../contatti.html">Contatti</a>
+      </nav>
+      <div class="site-header__actions">
+        <div class="lang-switcher" aria-label="Selezione lingua">
+          <a href="#" class="active">IT</a>
+          <span class="sep">/</span>
+          <a href="../../en/projects/index.html">EN</a>
+          <span class="sep">/</span>
+          <a href="../../ro/realizari/index.html">RO</a>
+        </div>
+        <a href="../contatti.html" class="btn btn--primary btn--sm">Richiedi preventivo</a>
+        <button class="menu-toggle" aria-label="Apri menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+            <line x1="2" y1="5" x2="18" y2="5"/>
+            <line x1="2" y1="10" x2="18" y2="10"/>
+            <line x1="2" y1="15" x2="18" y2="15"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu__header">
+      <a href="../index.html" class="site-header__logo">
+        <img src="https://www.ferramati.ro/wp-content/uploads/2023/08/ferramati-logo-int_004.svg" alt="Ferramati" style="filter: brightness(0) invert(1); height: 34px;">
+      </a>
+      <button class="mobile-menu__close" aria-label="Chiudi menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="4" x2="16" y2="16"/><line x1="16" y1="4" x2="4" y2="16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu__nav" aria-label="Navigazione mobile">
+      <a href="../chi-siamo.html">Chi siamo</a>
+      <a href="../prodotti/index.html">Prodotti</a>
+      <a href="../index.html#soluzioni">Soluzioni</a>
+      <a href="../realizzazioni/index.html">Realizzazioni</a>
+      <a href="../news/index.html">News</a>
+      <a href="../contatti.html">Contatti</a>
+    </nav>
+    <div class="mobile-menu__footer">
+      <div class="lang-switcher"><a href="#" class="active">IT</a><span class="sep">/</span><a href="../../en/projects/index.html">EN</a><span class="sep">/</span><a href="../../ro/realizari/index.html">RO</a></div>
+      <a href="../contatti.html" class="btn btn--primary" style="width:100%; justify-content:center;">Richiedi preventivo</a>
+    </div>
+  </div>
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb">
+    <div class="container">
+      <a href="../index.html">Home</a>
+      <span>/</span>
+      <span>Realizzazioni</span>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="hero" style="min-height: 40vh;">
+    <div class="hero__bg">
+      <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1600&q=80" alt="Cantiere con struttura in cemento armato">
+    </div>
+    <div class="container">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Case study</p>
+        <h1 class="hero__title">Realizzazioni</h1>
+        <p class="hero__subtitle">Cantieri completati con fornitura strutturale Ferramati. Residenziale, industriale, commerciale e infrastrutture in Italia e Romania.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTER BAR -->
+  <section class="section" style="padding-bottom: 0;">
+    <div class="container">
+      <div style="display: flex; flex-wrap: wrap; gap: var(--s-sm); margin-bottom: var(--s-2xl);">
+        <span class="badge badge--orange">Tutti</span>
+        <span class="badge">Residenziale</span>
+        <span class="badge">Industriale</span>
+        <span class="badge">Commerciale</span>
+        <span class="badge">Infrastrutture</span>
+        <span class="badge">Romania</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS GRID -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="grid grid-3">
+
+        <!-- Progetto 1 -->
+        <article class="case-card">
+          <img class="case-card__img" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=900&q=80" alt="Complesso residenziale Milano">
+          <div class="case-card__overlay">
+            <span class="case-card__sector">Residenziale &middot; Milano</span>
+            <h3 class="case-card__title">Complesso residenziale</h3>
+            <p class="case-card__meta">Lastre tralicciate + ferro sagomato &middot; 2024</p>
+          </div>
+          <a href="complesso-residenziale-milano.html" style="position:absolute;inset:0;z-index:2;" aria-label="Vedi progetto: Complesso residenziale Milano"></a>
+        </article>
+
+        <!-- Progetto 2 -->
+        <article class="case-card">
+          <img class="case-card__img" src="https://images.unsplash.com/photo-1587582423116-ec07293f0395?w=600&q=80" alt="Polo logistico Bari">
+          <div class="case-card__overlay">
+            <span class="case-card__sector">Industriale &middot; Bari</span>
+            <h3 class="case-card__title">Polo logistico</h3>
+            <p class="case-card__meta">Doppie lastre + EPS &middot; 2023</p>
+          </div>
+          <a href="#" style="position:absolute;inset:0;z-index:2;" aria-label="Vedi progetto: Polo logistico Bari"></a>
+        </article>
+
+        <!-- Progetto 3 -->
+        <article class="case-card">
+          <img class="case-card__img" src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=600&q=80" alt="Centro commerciale Lecce">
+          <div class="case-card__overlay">
+            <span class="case-card__sector">Commerciale &middot; Lecce</span>
+            <h3 class="case-card__title">Centro commerciale</h3>
+            <p class="case-card__meta">Fornitura strutturale completa &middot; 2023</p>
+          </div>
+          <a href="#" style="position:absolute;inset:0;z-index:2;" aria-label="Vedi progetto: Centro commerciale Lecce"></a>
+        </article>
+
+        <!-- Progetto 4 -->
+        <article class="case-card">
+          <img class="case-card__img" src="https://images.unsplash.com/photo-1590069261209-f8e9b8642343?w=600&q=80" alt="Parcheggio multipiano Bergamo">
+          <div class="case-card__overlay">
+            <span class="case-card__sector">Infrastrutture &middot; Bergamo</span>
+            <h3 class="case-card__title">Parcheggio multipiano</h3>
+            <p class="case-card__meta">Ferro sagomato + FERCASS &middot; 2023</p>
+          </div>
+          <a href="#" style="position:absolute;inset:0;z-index:2;" aria-label="Vedi progetto: Parcheggio multipiano Bergamo"></a>
+        </article>
+
+        <!-- Progetto 5 -->
+        <article class="case-card">
+          <img class="case-card__img" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80" alt="Torre direzionale Roma">
+          <div class="case-card__overlay">
+            <span class="case-card__sector">Commerciale &middot; Roma</span>
+            <h3 class="case-card__title">Torre direzionale</h3>
+            <p class="case-card__meta">Gabbie assemblate + lastre &middot; 2022</p>
+          </div>
+          <a href="#" style="position:absolute;inset:0;z-index:2;" aria-label="Vedi progetto: Torre direzionale Roma"></a>
+        </article>
+
+        <!-- Progetto 6 -->
+        <article class="case-card">
+          <img class="case-card__img" src="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?w=600&q=80" alt="Stabilimento industriale Timisoara">
+          <div class="case-card__overlay">
+            <span class="case-card__sector">Industriale &middot; Timi&scedil;oara</span>
+            <h3 class="case-card__title">Stabilimento produttivo</h3>
+            <p class="case-card__meta">Fornitura completa ferro &middot; 2022</p>
+          </div>
+          <a href="#" style="position:absolute;inset:0;z-index:2;" aria-label="Vedi progetto: Stabilimento produttivo Timisoara"></a>
+        </article>
+
+        <!-- Progetto 7 -->
+        <article class="case-card">
+          <img class="case-card__img" src="https://images.unsplash.com/photo-1517581177684-1f93a5b01fcd?w=600&q=80" alt="Residenze universitarie Padova">
+          <div class="case-card__overlay">
+            <span class="case-card__sector">Residenziale &middot; Padova</span>
+            <h3 class="case-card__title">Residenze universitarie</h3>
+            <p class="case-card__meta">Lastre tralicciate + EPS &middot; 2022</p>
+          </div>
+          <a href="#" style="position:absolute;inset:0;z-index:2;" aria-label="Vedi progetto: Residenze universitarie Padova"></a>
+        </article>
+
+        <!-- Progetto 8 -->
+        <article class="case-card">
+          <img class="case-card__img" src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80" alt="Ospedale Oradea">
+          <div class="case-card__overlay">
+            <span class="case-card__sector">Sanitario &middot; Oradea</span>
+            <h3 class="case-card__title">Ospedale regionale</h3>
+            <p class="case-card__meta">Ferro sagomato + doppie lastre &middot; 2021</p>
+          </div>
+          <a href="#" style="position:absolute;inset:0;z-index:2;" aria-label="Vedi progetto: Ospedale regionale Oradea"></a>
+        </article>
+
+        <!-- Progetto 9 -->
+        <article class="case-card">
+          <img class="case-card__img" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Superstrada Puglia">
+          <div class="case-card__overlay">
+            <span class="case-card__sector">Infrastrutture &middot; Puglia</span>
+            <h3 class="case-card__title">Viadotto stradale</h3>
+            <p class="case-card__meta">Gabbie assemblate &middot; 2021</p>
+          </div>
+          <a href="#" style="position:absolute;inset:0;z-index:2;" aria-label="Vedi progetto: Viadotto stradale Puglia"></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NUMERI -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="grid grid-4" style="text-align: center;">
+        <div>
+          <p style="font-family: var(--font-display); font-size: var(--fs-h2); font-weight: 700; color: var(--color-safety-orange);">500+</p>
+          <p style="font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--ls-label); color: var(--steel-600);">Cantieri serviti</p>
+        </div>
+        <div>
+          <p style="font-family: var(--font-display); font-size: var(--fs-h2); font-weight: 700; color: var(--color-safety-orange);">25+</p>
+          <p style="font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--ls-label); color: var(--steel-600);">Anni di esperienza</p>
+        </div>
+        <div>
+          <p style="font-family: var(--font-display); font-size: var(--fs-h2); font-weight: 700; color: var(--color-safety-orange);">2</p>
+          <p style="font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--ls-label); color: var(--steel-600);">Paesi operativi</p>
+        </div>
+        <div>
+          <p style="font-family: var(--font-display); font-size: var(--fs-h2); font-weight: 700; color: var(--color-safety-orange);">4</p>
+          <p style="font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--ls-label); color: var(--steel-600);">Stabilimenti</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-block">
+    <div class="container">
+      <h2 class="cta-block__title">Hai un progetto da valutare?</h2>
+      <p class="cta-block__desc">Contatta l'ufficio tecnico Ferramati per discutere la fornitura strutturale del tuo prossimo cantiere.</p>
+      <div class="cta-block__actions">
+        <a href="../contatti.html" class="btn btn--primary">Richiedi preventivo</a>
+        <a href="../contatti.html" class="btn btn--outline-white">Parla con l'ufficio tecnico</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="https://www.ferramati.ro/wp-content/uploads/2023/08/ferramati-logo-int_004.svg" alt="Ferramati" style="filter: brightness(0) invert(1); height:30px;">
+          <p>Partner tecnico per l'edilizia civile e industriale. Ferro sagomato, prefabbricati in c.a. e sistemi EPS.</p>
+        </div>
+        <div>
+          <h4>Prodotti</h4>
+          <ul>
+            <li><a href="../prodotti/ferro-sagomato.html">Ferro sagomato</a></li>
+            <li><a href="#">FERCASS</a></li>
+            <li><a href="#">Lastre tralicciate</a></li>
+            <li><a href="#">Doppie lastre</a></li>
+            <li><a href="#">Elementi EPS</a></li>
+            <li><a href="#">Sistema STEP</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Azienda</h4>
+          <ul>
+            <li><a href="../chi-siamo.html">Chi siamo</a></li>
+            <li><a href="#">Stabilimenti</a></li>
+            <li><a href="#">Certificazioni</a></li>
+            <li><a href="#">Lavora con noi</a></li>
+            <li><a href="../news/index.html">News</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Sedi</h4>
+          <ul>
+            <li><a href="#">Fasano (BR)</a></li>
+            <li><a href="#">Verdello (BG)</a></li>
+            <li><a href="#">Timi&scedil;oara, Romania</a></li>
+            <li><a href="#">Oradea, Romania</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>&copy; 2026 Ferramati International S.r.l. Tutti i diritti riservati.</span>
+        <div class="lang-switcher">
+          <a href="#" class="active">IT</a>
+          <span class="sep">/</span>
+          <a href="../../en/projects/index.html">EN</a>
+          <span class="sep">/</span>
+          <a href="../../ro/realizari/index.html">RO</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/mobile-menu.js"></script>
+</body>
+</html>

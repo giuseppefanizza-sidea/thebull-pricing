@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Știri — Noutăți și actualizări | Ferramati</title>
+  <meta name="description" content="Știri și actualizări de la grupul Ferramati: produse noi, șantiere în desfășurare, evenimente, certificări și noutăți ale companiei.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/design-system.css">
+  <link rel="stylesheet" href="../../assets/css/mobile-menu.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="site-header__logo">
+        <img src="https://www.ferramati.ro/wp-content/uploads/2023/08/ferramati-logo-int_004.svg" alt="Ferramati" style="filter: brightness(0) invert(1);">
+      </a>
+      <nav class="site-header__nav" aria-label="Navigare principală">
+        <a href="../despre-noi.html">Despre noi</a>
+        <a href="../produse/index.html">Produse</a>
+        <a href="../index.html#solutii">Soluții</a>
+        <a href="../realizari/index.html">Realizări</a>
+        <a href="../stiri/index.html">Știri</a>
+        <a href="../contacte.html">Contact</a>
+      </nav>
+      <div class="site-header__actions">
+        <div class="lang-switcher" aria-label="Selector de limbă">
+          <a href="../../it/news/index.html">IT</a>
+          <span class="sep">/</span>
+          <a href="../../en/news/index.html">EN</a>
+          <span class="sep">/</span>
+          <a href="#" class="active">RO</a>
+        </div>
+        <a href="../contacte.html" class="btn btn--primary btn--sm">Solicită ofertă</a>
+        <button class="menu-toggle" aria-label="Deschide meniu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+            <line x1="2" y1="5" x2="18" y2="5"/><line x1="2" y1="10" x2="18" y2="10"/><line x1="2" y1="15" x2="18" y2="15"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu__header">
+      <a href="../index.html" class="site-header__logo">
+        <img src="https://www.ferramati.ro/wp-content/uploads/2023/08/ferramati-logo-int_004.svg" alt="Ferramati" style="filter: brightness(0) invert(1); height: 34px;">
+      </a>
+      <button class="mobile-menu__close" aria-label="Închide meniu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="4" x2="16" y2="16"/><line x1="16" y1="4" x2="4" y2="16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu__nav" aria-label="Navigare mobilă">
+      <a href="../despre-noi.html">Despre noi</a>
+      <a href="../produse/index.html">Produse</a>
+      <a href="../index.html#solutii">Soluții</a>
+      <a href="../realizari/index.html">Realizări</a>
+      <a href="../stiri/index.html">Știri</a>
+      <a href="../contacte.html">Contact</a>
+    </nav>
+    <div class="mobile-menu__footer">
+      <div class="lang-switcher"><a href="../../it/news/index.html">IT</a><span class="sep">/</span><a href="../../en/news/index.html">EN</a><span class="sep">/</span><a href="#" class="active">RO</a></div>
+      <a href="../contacte.html" class="btn btn--primary" style="width:100%; justify-content:center;">Solicită ofertă</a>
+    </div>
+  </div>
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb">
+    <div class="container">
+      <a href="../index.html">Acasă</a>
+      <span>/</span>
+      <span>Știri</span>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="section" style="padding-bottom: var(--s-xl);">
+    <div class="container">
+      <p class="eyebrow mb-md">Actualizări</p>
+      <h1 class="mb-lg">Știri</h1>
+      <p style="color: var(--steel-600); font-size: var(--fs-body-lg); line-height: var(--lh-body); max-width: 640px;">
+        Noutăți de la grupul Ferramati: produse noi, șantiere în curs, evenimente din industrie și actualizări ale companiei.
+      </p>
+    </div>
+  </section>
+
+  <!-- NEWS GRID -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="grid grid-3">
+
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Extindere unitate" style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius: var(--radius-md); margin-bottom: var(--s-md);">
+          <span class="product-card__eyebrow">Iunie 2026 &middot; Companie</span>
+          <h3 class="product-card__title">Finalizarea extinderii unității Verdello</h3>
+          <p class="product-card__desc">S-au finalizat lucrările de extindere a liniei de producție plăci cu rețea sudată la unitatea din Verdello (BG). Capacitate de producție crescută cu 40%.</p>
+          <a href="#" class="product-card__link">Citește mai mult <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a>
+        </article>
+
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80" alt="Șantier" style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius: var(--radius-md); margin-bottom: var(--s-md);">
+          <span class="product-card__eyebrow">Mai 2026 &middot; Realizări</span>
+          <h3 class="product-card__title">Furnizare finalizată pentru complexul rezidențial din Milano</h3>
+          <p class="product-card__desc">14 luni de livrări programate pentru complexul de 3 clădiri pe 6 niveluri. Zero întârzieri pe livrările săptămânale.</p>
+          <a href="#" class="product-card__link">Citește mai mult <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a>
+        </article>
+
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80" alt="Certificare" style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius: var(--radius-md); margin-bottom: var(--s-md);">
+          <span class="product-card__eyebrow">Aprilie 2026 &middot; Certificări</span>
+          <h3 class="product-card__title">Reînnoirea certificării ISO 9001:2015</h3>
+          <p class="product-card__desc">Ferramati International a trecut cu succes auditul de reînnoire a certificării ISO 9001:2015 pentru toate cele 4 unități de producție.</p>
+          <a href="#" class="product-card__link">Citește mai mult <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a>
+        </article>
+
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1587582423116-ec07293f0395?w=600&q=80" alt="Târg" style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius: var(--radius-md); margin-bottom: var(--s-md);">
+          <span class="product-card__eyebrow">Martie 2026 &middot; Evenimente</span>
+          <h3 class="product-card__title">Ferramati la SAIE Bologna 2026</h3>
+          <p class="product-card__desc">Vizitați standul nostru la SAIE Bologna pentru a descoperi cele mai recente sisteme STEP și soluții prefabricate sustenabile.</p>
+          <a href="#" class="product-card__link">Citește mai mult <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a>
+        </article>
+
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?w=600&q=80" alt="Producție EPS" style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius: var(--radius-md); margin-bottom: var(--s-md);">
+          <span class="product-card__eyebrow">Februarie 2026 &middot; Produse</span>
+          <h3 class="product-card__title">Noua linie EPS de înaltă densitate</h3>
+          <p class="product-card__desc">Disponibilă noua gamă de elemente EPS de înaltă densitate pentru aplicații portante. Ideale pentru planșee ușurate cu sarcini ridicate.</p>
+          <a href="#" class="product-card__link">Citește mai mult <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a>
+        </article>
+
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80" alt="Parteneriat" style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius: var(--radius-md); margin-bottom: var(--s-md);">
+          <span class="product-card__eyebrow">Ianuarie 2026 &middot; Parteneriate</span>
+          <h3 class="product-card__title">Acord-cadru cu un important antreprenor național</h3>
+          <p class="product-card__desc">Semnat un acord-cadru multianual pentru furnizarea integrată de oțel fasonat și prefabricate pe șantiere din toată Italia.</p>
+          <a href="#" class="product-card__link">Citește mai mult <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-block">
+    <div class="container">
+      <h2 class="cta-block__title">Rămâneți la curent</h2>
+      <p class="cta-block__desc">Urmăriți-ne pe LinkedIn pentru cele mai recente noutăți de la grupul Ferramati.</p>
+      <div class="cta-block__actions">
+        <a href="#" class="btn btn--primary">Urmărește pe LinkedIn</a>
+        <a href="../contacte.html" class="btn btn--outline-white">Contactați-ne</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="https://www.ferramati.ro/wp-content/uploads/2023/08/ferramati-logo-int_004.svg" alt="Ferramati" style="filter: brightness(0) invert(1); height:30px;">
+          <p>Partener tehnic pentru construcții civile și industriale. Oțel beton fasonat, prefabricate din b.a. și sisteme EPS.</p>
+        </div>
+        <div>
+          <h4>Produse</h4>
+          <ul>
+            <li><a href="#">Oțel beton fasonat</a></li>
+            <li><a href="#">FERCASS</a></li>
+            <li><a href="#">Plăci cu rețea sudată</a></li>
+            <li><a href="#">Plăci duble</a></li>
+            <li><a href="#">Elemente EPS</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Companie</h4>
+          <ul>
+            <li><a href="../despre-noi.html">Despre noi</a></li>
+            <li><a href="#">Unități de producție</a></li>
+            <li><a href="#">Certificări</a></li>
+            <li><a href="#">Cariere</a></li>
+            <li><a href="../stiri/index.html">Știri</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Locații</h4>
+          <ul>
+            <li><a href="#">Fasano (BR), Italia</a></li>
+            <li><a href="#">Verdello (BG), Italia</a></li>
+            <li><a href="#">Timișoara, România</a></li>
+            <li><a href="#">Oradea, România</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>&copy; 2026 Ferramati International S.r.l. Toate drepturile rezervate.</span>
+        <div class="lang-switcher">
+          <a href="../../it/news/index.html">IT</a>
+          <span class="sep">/</span>
+          <a href="../../en/news/index.html">EN</a>
+          <span class="sep">/</span>
+          <a href="#" class="active">RO</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/mobile-menu.js"></script>
+</body>
+</html>

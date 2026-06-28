@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Realizări — Proiecte și șantiere | Ferramati</title>
+  <meta name="description" content="Studii de caz și realizări Ferramati: furnizări structurale pentru construcții rezidențiale, industriale, comerciale și infrastructură în Italia și România.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/design-system.css">
+  <link rel="stylesheet" href="../../assets/css/mobile-menu.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="site-header__logo">
+        <img src="https://www.ferramati.ro/wp-content/uploads/2023/08/ferramati-logo-int_004.svg" alt="Ferramati" style="filter: brightness(0) invert(1);">
+      </a>
+      <nav class="site-header__nav" aria-label="Navigare principală">
+        <a href="../despre-noi.html">Despre noi</a>
+        <a href="../produse/index.html">Produse</a>
+        <a href="../index.html#solutii">Soluții</a>
+        <a href="../realizari/index.html">Realizări</a>
+        <a href="../stiri/index.html">Știri</a>
+        <a href="../contacte.html">Contact</a>
+      </nav>
+      <div class="site-header__actions">
+        <div class="lang-switcher" aria-label="Selector de limbă">
+          <a href="../../it/realizzazioni/index.html">IT</a>
+          <span class="sep">/</span>
+          <a href="../../en/projects/index.html">EN</a>
+          <span class="sep">/</span>
+          <a href="#" class="active">RO</a>
+        </div>
+        <a href="../contacte.html" class="btn btn--primary btn--sm">Solicită ofertă</a>
+        <button class="menu-toggle" aria-label="Deschide meniu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+            <line x1="2" y1="5" x2="18" y2="5"/><line x1="2" y1="10" x2="18" y2="10"/><line x1="2" y1="15" x2="18" y2="15"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu__header">
+      <a href="../index.html" class="site-header__logo">
+        <img src="https://www.ferramati.ro/wp-content/uploads/2023/08/ferramati-logo-int_004.svg" alt="Ferramati" style="filter: brightness(0) invert(1); height: 34px;">
+      </a>
+      <button class="mobile-menu__close" aria-label="Închide meniu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="4" x2="16" y2="16"/><line x1="16" y1="4" x2="4" y2="16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu__nav" aria-label="Navigare mobilă">
+      <a href="../despre-noi.html">Despre noi</a>
+      <a href="../produse/index.html">Produse</a>
+      <a href="../index.html#solutii">Soluții</a>
+      <a href="../realizari/index.html">Realizări</a>
+      <a href="../stiri/index.html">Știri</a>
+      <a href="../contacte.html">Contact</a>
+    </nav>
+    <div class="mobile-menu__footer">
+      <div class="lang-switcher"><a href="../../it/realizzazioni/index.html">IT</a><span class="sep">/</span><a href="../../en/projects/index.html">EN</a><span class="sep">/</span><a href="#" class="active">RO</a></div>
+      <a href="../contacte.html" class="btn btn--primary" style="width:100%; justify-content:center;">Solicită ofertă</a>
+    </div>
+  </div>
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb">
+    <div class="container">
+      <a href="../index.html">Acasă</a>
+      <span>/</span>
+      <span>Realizări</span>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="hero" style="min-height: 40vh;">
+    <div class="hero__bg">
+      <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1600&q=80" alt="Șantier cu structură din beton armat">
+    </div>
+    <div class="container">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Studii de caz</p>
+        <h1 class="hero__title">Realizări</h1>
+        <p class="hero__subtitle">Șantiere finalizate cu furnizare structurală Ferramati. Rezidențial, industrial, comercial și infrastructură în Italia și România.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTER BAR -->
+  <section class="section" style="padding-bottom: 0;">
+    <div class="container">
+      <div style="display: flex; flex-wrap: wrap; gap: var(--s-sm); margin-bottom: var(--s-2xl);">
+        <span class="badge badge--orange">Toate</span>
+        <span class="badge">Rezidențial</span>
+        <span class="badge">Industrial</span>
+        <span class="badge">Comercial</span>
+        <span class="badge">Infrastructură</span>
+        <span class="badge">România</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS GRID -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="grid grid-3">
+
+        <article class="case-card">
+          <img class="case-card__img" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=900&q=80" alt="Complex rezidențial Milano">
+          <div class="case-card__overlay">
+            <span class="case-card__sector">Rezidențial &middot; Milano</span>
+            <h3 class="case-card__title">Complex rezidențial</h3>
+            <p class="case-card__meta">Plăci cu rețea sudată + oțel fasonat &middot; 2024</p>
+          </div>
+        </article>
+
+        <article class="case-card">
+          <img class="case-card__img" src="https://images.unsplash.com/photo-1587582423116-ec07293f0395?w=600&q=80" alt="Hub logistic Bari">
+          <div class="case-card__overlay">
+            <span class="case-card__sector">Industrial &middot; Bari</span>
+            <h3 class="case-card__title">Hub logistic</h3>
+            <p class="case-card__meta">Plăci duble + EPS &middot; 2023</p>
+          </div>
+        </article>
+
+        <article class="case-card">
+          <img class="case-card__img" src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=600&q=80" alt="Centru comercial Lecce">
+          <div class="case-card__overlay">
+            <span class="case-card__sector">Comercial &middot; Lecce</span>
+            <h3 class="case-card__title">Centru comercial</h3>
+            <p class="case-card__meta">Furnizare structurală completă &middot; 2023</p>
+          </div>
+        </article>
+
+        <article class="case-card">
+          <img class="case-card__img" src="https://images.unsplash.com/photo-1590069261209-f8e9b8642343?w=600&q=80" alt="Parcare etajată Bergamo">
+          <div class="case-card__overlay">
+            <span class="case-card__sector">Infrastructură &middot; Bergamo</span>
+            <h3 class="case-card__title">Parcare etajată</h3>
+            <p class="case-card__meta">Oțel fasonat + FERCASS &middot; 2023</p>
+          </div>
+        </article>
+
+        <article class="case-card">
+          <img class="case-card__img" src="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?w=600&q=80" alt="Unitate de producție Timișoara">
+          <div class="case-card__overlay">
+            <span class="case-card__sector">Industrial &middot; Timișoara</span>
+            <h3 class="case-card__title">Unitate de producție</h3>
+            <p class="case-card__meta">Furnizare completă oțel &middot; 2022</p>
+          </div>
+        </article>
+
+        <article class="case-card">
+          <img class="case-card__img" src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80" alt="Spital regional Oradea">
+          <div class="case-card__overlay">
+            <span class="case-card__sector">Sanitar &middot; Oradea</span>
+            <h3 class="case-card__title">Spital regional</h3>
+            <p class="case-card__meta">Oțel fasonat + plăci duble &middot; 2021</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STATISTICI -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="grid grid-4" style="text-align: center;">
+        <div>
+          <p style="font-family: var(--font-display); font-size: var(--fs-h2); font-weight: 700; color: var(--color-safety-orange);">500+</p>
+          <p style="font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--ls-label); color: var(--steel-600);">Șantiere deservite</p>
+        </div>
+        <div>
+          <p style="font-family: var(--font-display); font-size: var(--fs-h2); font-weight: 700; color: var(--color-safety-orange);">25+</p>
+          <p style="font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--ls-label); color: var(--steel-600);">Ani de experiență</p>
+        </div>
+        <div>
+          <p style="font-family: var(--font-display); font-size: var(--fs-h2); font-weight: 700; color: var(--color-safety-orange);">2</p>
+          <p style="font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--ls-label); color: var(--steel-600);">Țări operative</p>
+        </div>
+        <div>
+          <p style="font-family: var(--font-display); font-size: var(--fs-h2); font-weight: 700; color: var(--color-safety-orange);">4</p>
+          <p style="font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--ls-label); color: var(--steel-600);">Unități de producție</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-block">
+    <div class="container">
+      <h2 class="cta-block__title">Aveți un proiect de evaluat?</h2>
+      <p class="cta-block__desc">Contactați echipa tehnică Ferramati pentru a discuta furnizarea structurală pentru următorul dumneavoastră șantier.</p>
+      <div class="cta-block__actions">
+        <a href="../contacte.html" class="btn btn--primary">Solicită ofertă</a>
+        <a href="../contacte.html" class="btn btn--outline-white">Vorbește cu echipa tehnică</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="https://www.ferramati.ro/wp-content/uploads/2023/08/ferramati-logo-int_004.svg" alt="Ferramati" style="filter: brightness(0) invert(1); height:30px;">
+          <p>Partener tehnic pentru construcții civile și industriale. Oțel beton fasonat, prefabricate din b.a. și sisteme EPS.</p>
+        </div>
+        <div>
+          <h4>Produse</h4>
+          <ul>
+            <li><a href="#">Oțel beton fasonat</a></li>
+            <li><a href="#">FERCASS</a></li>
+            <li><a href="#">Plăci cu rețea sudată</a></li>
+            <li><a href="#">Plăci duble</a></li>
+            <li><a href="#">Elemente EPS</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Companie</h4>
+          <ul>
+            <li><a href="../despre-noi.html">Despre noi</a></li>
+            <li><a href="#">Unități de producție</a></li>
+            <li><a href="#">Certificări</a></li>
+            <li><a href="#">Cariere</a></li>
+            <li><a href="../stiri/index.html">Știri</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Locații</h4>
+          <ul>
+            <li><a href="#">Fasano (BR), Italia</a></li>
+            <li><a href="#">Verdello (BG), Italia</a></li>
+            <li><a href="#">Timișoara, România</a></li>
+            <li><a href="#">Oradea, România</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>&copy; 2026 Ferramati International S.r.l. Toate drepturile rezervate.</span>
+        <div class="lang-switcher">
+          <a href="../../it/realizzazioni/index.html">IT</a>
+          <span class="sep">/</span>
+          <a href="../../en/projects/index.html">EN</a>
+          <span class="sep">/</span>
+          <a href="#" class="active">RO</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/mobile-menu.js"></script>
+</body>
+</html>

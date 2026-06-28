@@ -849,11 +849,11 @@ h4, .h4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: var(--s-4xl) var(--pad-mob);
+  padding: var(--s-2xl) var(--pad-mob);
   position: relative;
 }
 @media (min-width: 768px) {
-  .hero__text { padding: var(--s-5xl) var(--pad-tab); }
+  .hero__text { padding: var(--s-3xl) var(--pad-tab); }
 }
 @media (min-width: 1024px) {
   .hero__text { padding: var(--s-5xl) var(--s-5xl) var(--s-5xl) var(--pad-desk); }

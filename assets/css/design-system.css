@@ -251,6 +251,17 @@ h4, .h4 {
 }
 .site-header__logo img { height: 34px; width: auto; }
 
+/* Mobile header adjustments */
+@media (max-width: 767px) {
+  .site-header__logo img { height: 38px; }
+  .site-header__actions .lang-switcher { display: none; }
+  .site-header__actions .btn--sm { display: none; }
+  .site-header__actions { gap: var(--s-xs); }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .site-header__actions .btn--sm { font-size: 11px; padding: 7px 14px; }
+}
+
 .site-header__nav { display: none; }
 @media (min-width: 1024px) {
   .site-header__nav {

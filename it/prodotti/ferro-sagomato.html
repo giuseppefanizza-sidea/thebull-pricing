@@ -7,7 +7,7 @@
   <meta name="description" content="Produzione e fornitura di ferro sagomato e assemblato per cemento armato. Taglio, piega e sagomatura secondo progetto per strutture civili e industriali. Schede tecniche e supporto al progetto.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/design-system.css">
 </head>
 <body>
@@ -16,7 +16,9 @@
   <header class="site-header">
     <div class="container">
       <a href="../index.html" class="site-header__logo">
-        <img src="https://www.ferramati.ro/wp-content/uploads/2023/08/ferramati-logo-int_004.svg" alt="Ferramati" height="36">
+        <img src="https://www.ferramati.ro/wp-content/uploads/2023/08/ferramati-logo-int_004.svg"
+             alt="Ferramati"
+             style="filter: brightness(0) invert(1);">
       </a>
       <nav class="site-header__nav" aria-label="Navigazione principale">
         <a href="../index.html#gruppo">Gruppo</a>
@@ -29,13 +31,17 @@
       <div class="site-header__actions">
         <div class="lang-switcher" aria-label="Selezione lingua">
           <a href="#" class="active">IT</a>
+          <span class="sep">/</span>
           <a href="../../index.html">EN</a>
+          <span class="sep">/</span>
           <a href="../../ro/index.html">RO</a>
         </div>
-        <a href="../contatti.html" class="btn btn--primary btn--small">Richiedi preventivo</a>
+        <a href="../contatti.html" class="btn btn--primary btn--sm">Richiedi preventivo</a>
         <button class="menu-toggle" aria-label="Apri menu">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+            <line x1="2" y1="5" x2="18" y2="5"/>
+            <line x1="2" y1="10" x2="18" y2="10"/>
+            <line x1="2" y1="15" x2="18" y2="15"/>
           </svg>
         </button>
       </div>
@@ -49,88 +55,90 @@
       <span>/</span>
       <a href="../index.html#prodotti">Prodotti</a>
       <span>/</span>
-      <span style="color: var(--color-graphite-steel);">Ferro sagomato e assemblato</span>
+      <span>Ferro sagomato e assemblato</span>
     </div>
   </nav>
 
   <!-- PRODUCT HERO -->
-  <section class="section" style="padding-top: var(--space-xl);">
+  <section class="product-hero">
     <div class="container">
-      <div class="grid grid-2" style="align-items: start;">
-        <div>
-          <p class="eyebrow mb-md">Ferro per cemento armato</p>
-          <h1 style="margin-bottom: var(--space-lg);">Ferro sagomato e assemblato</h1>
-          <p style="font-size: var(--font-size-body-lg); color: var(--color-steel-grey); margin-bottom: var(--space-xl); max-width: 520px;">
-            Fornitura di ferro tondo per cemento armato, tagliato, piegato e sagomato secondo progetto. 
-            Soluzione completa per imprese edili e general contractor che cercano un unico interlocutore 
+      <div class="product-hero__grid">
+        <div class="product-hero__text">
+          <p class="eyebrow mb-md">PRD-001 · Ferro per cemento armato</p>
+          <h1 class="mb-lg">Ferro sagomato e assemblato</h1>
+          <p class="product-hero__desc">
+            Fornitura di ferro tondo per cemento armato, tagliato, piegato e sagomato secondo progetto.
+            Soluzione completa per imprese edili e general contractor che cercano un unico interlocutore
             tecnico per la struttura in c.a.
           </p>
-          <div style="display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-bottom: var(--space-xl);">
-            <span class="badge">Disponibile in: Italia</span>
-            <span class="badge">Disponibile in: Romania</span>
+          <div class="product-hero__badges">
+            <span class="badge">Italia</span>
+            <span class="badge">Romania</span>
             <span class="badge badge--blue">Scheda tecnica PDF</span>
           </div>
-          <div style="display: flex; flex-wrap: wrap; gap: var(--space-md);">
+          <div class="product-hero__actions">
             <a href="../contatti.html" class="btn btn--primary">Richiedi preventivo</a>
             <a href="#" class="btn btn--secondary">Scarica scheda tecnica</a>
           </div>
         </div>
-        <div>
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=700&q=80" alt="Dettaglio ferro sagomato per cemento armato" style="border-radius: var(--radius-md); width: 100%; aspect-ratio: 4/3; object-fit: cover;">
+        <div class="product-hero__image">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80"
+               alt="Dettaglio ferro sagomato per cemento armato — barre piegate pronte per la posa">
         </div>
       </div>
     </div>
   </section>
 
   <!-- DATI TECNICI -->
-  <section class="section section--alt">
+  <section class="tech-section">
     <div class="container">
-      <div class="grid grid-2" style="align-items: start;">
+      <div class="tech-layout">
         <div>
           <p class="eyebrow mb-md">Dati tecnici</p>
           <h2 class="mb-lg">Specifiche di prodotto</h2>
           <div class="tech-panel">
             <div class="tech-panel__header">
+              <div class="tech-panel__dot"></div>
               <h3>Ferro sagomato — Caratteristiche</h3>
             </div>
             <div class="tech-panel__row">
-              <span class="tech-panel__label">Materiale</span>
-              <span class="tech-panel__value">B450C</span>
+              <span class="tech-panel__key">Materiale</span>
+              <span class="tech-panel__val tech-panel__val--hi">B450C</span>
             </div>
             <div class="tech-panel__row">
-              <span class="tech-panel__label">Normativa</span>
-              <span class="tech-panel__value">UNI EN 10080 / NTC 2018</span>
+              <span class="tech-panel__key">Normativa</span>
+              <span class="tech-panel__val">UNI EN 10080 / NTC 2018</span>
             </div>
             <div class="tech-panel__row">
-              <span class="tech-panel__label">Tensione di snervamento</span>
-              <span class="tech-panel__value">&ge; 450 MPa</span>
+              <span class="tech-panel__key">Tensione di snervamento</span>
+              <span class="tech-panel__val">&ge; 450 MPa</span>
             </div>
             <div class="tech-panel__row">
-              <span class="tech-panel__label">Resistenza a trazione</span>
-              <span class="tech-panel__value">&ge; 540 MPa</span>
+              <span class="tech-panel__key">Resistenza a trazione</span>
+              <span class="tech-panel__val">&ge; 540 MPa</span>
             </div>
             <div class="tech-panel__row">
-              <span class="tech-panel__label">Allungamento</span>
-              <span class="tech-panel__value">&ge; 16%</span>
+              <span class="tech-panel__key">Allungamento</span>
+              <span class="tech-panel__val">&ge; 16%</span>
             </div>
             <div class="tech-panel__row">
-              <span class="tech-panel__label">Diametri disponibili</span>
-              <span class="tech-panel__value">6 — 32 mm</span>
+              <span class="tech-panel__key">Diametri disponibili</span>
+              <span class="tech-panel__val">6 — 32 mm</span>
             </div>
             <div class="tech-panel__row">
-              <span class="tech-panel__label">Certificazione</span>
-              <span class="tech-panel__value">CE / C1 / C2</span>
+              <span class="tech-panel__key">Certificazione</span>
+              <span class="tech-panel__val">CE / C1 / C2</span>
             </div>
             <div class="tech-panel__row">
-              <span class="tech-panel__label">Classe di duttilit&agrave;</span>
-              <span class="tech-panel__value">Classe C (alta duttilit&agrave;)</span>
+              <span class="tech-panel__key">Classe di duttilità</span>
+              <span class="tech-panel__val">Classe C (alta duttilità)</span>
             </div>
           </div>
         </div>
         <div>
           <p class="eyebrow mb-md">Lavorazioni</p>
           <h2 class="mb-lg">Tipologie di fornitura</h2>
-          <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+          <div class="service-stack">
             <div class="service-item">
               <h4 class="service-item__title">Ferro sagomato</h4>
               <p class="service-item__desc">Barre tagliate e piegate secondo distinta di sagomatura. Pronti per la posa in opera con riduzione degli sfridi e ottimizzazione dei tempi di cantiere.</p>
@@ -184,71 +192,87 @@
   </section>
 
   <!-- VANTAGGI -->
-  <section class="section section--alt">
+  <section class="why-section">
     <div class="container">
-      <p class="eyebrow mb-md">Vantaggi</p>
-      <h2 class="mb-2xl">Perch&eacute; scegliere il ferro sagomato Ferramati</h2>
-      <div class="grid grid-2" style="max-width: 900px;">
-        <ul style="display: flex; flex-direction: column; gap: var(--space-md);">
-          <li class="service-item">
-            <h4 class="service-item__title">Zero sfridi in cantiere</h4>
-            <p class="service-item__desc">Sagomatura esatta secondo distinta: nessuno spreco di materiale, nessun tempo perso per lavorazioni in loco.</p>
-          </li>
-          <li class="service-item">
-            <h4 class="service-item__title">Controllo qualit&agrave; certificato</h4>
-            <p class="service-item__desc">Acciaio certificato CE con prove di laboratorio su ogni lotto. Tracciabilit&agrave; completa dalla barra alla gabbia.</p>
-          </li>
-          <li class="service-item">
-            <h4 class="service-item__title">Consegna programmata</h4>
-            <p class="service-item__desc">Logistica just-in-time coordinata con l'avanzamento del cantiere. Riduzione dello stoccaggio in sito.</p>
-          </li>
-        </ul>
-        <ul style="display: flex; flex-direction: column; gap: var(--space-md);">
-          <li class="service-item">
-            <h4 class="service-item__title">Supporto al progettista</h4>
-            <p class="service-item__desc">Verifica distinte di sagomatura, ottimizzazione delle armature, consulenza su dettagli costruttivi e normativa.</p>
-          </li>
-          <li class="service-item">
-            <h4 class="service-item__title">Integrazione ferro + prefabbricati</h4>
-            <p class="service-item__desc">Un unico fornitore per ferro sagomato e lastre tralicciate. Coordinamento unico, qualit&agrave; uniforme.</p>
-          </li>
-          <li class="service-item">
-            <h4 class="service-item__title">Posa in opera disponibile</h4>
-            <p class="service-item__desc">Squadre specializzate per la posa delle armature in cantiere. Servizio completo dalla produzione alla struttura finita.</p>
-          </li>
-        </ul>
+      <div class="section-head">
+        <p class="eyebrow mb-md">Vantaggi</p>
+        <h2 class="mb-3xl">Perché scegliere il ferro sagomato Ferramati</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <svg class="why-item__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="4" y="4" width="32" height="32" rx="1"/>
+            <line x1="20" y1="4" x2="20" y2="36"/>
+            <line x1="4" y1="20" x2="36" y2="20"/>
+          </svg>
+          <h4 class="why-item__title">Zero sfridi</h4>
+          <p class="why-item__desc">Sagomatura esatta secondo distinta: nessuno spreco, nessun tempo perso per lavorazioni in loco.</p>
+        </div>
+        <div class="why-item">
+          <svg class="why-item__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="20" cy="20" r="16"/>
+            <path d="M14 20l4 4 8-8"/>
+          </svg>
+          <h4 class="why-item__title">Qualità certificata</h4>
+          <p class="why-item__desc">Acciaio certificato CE con prove di laboratorio su ogni lotto. Tracciabilità completa dalla barra alla gabbia.</p>
+        </div>
+        <div class="why-item">
+          <svg class="why-item__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="20" cy="20" r="16"/>
+            <polyline points="20,10 20,20 27,25"/>
+          </svg>
+          <h4 class="why-item__title">Consegna programmata</h4>
+          <p class="why-item__desc">Logistica just-in-time coordinata con l'avanzamento del cantiere. Riduzione dello stoccaggio in sito.</p>
+        </div>
+        <div class="why-item">
+          <svg class="why-item__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polygon points="20,4 36,30 4,30"/>
+            <line x1="20" y1="16" x2="20" y2="24"/>
+            <circle cx="20" cy="26" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+          <h4 class="why-item__title">Supporto al progettista</h4>
+          <p class="why-item__desc">Verifica distinte, ottimizzazione armature, consulenza su dettagli costruttivi e normativa.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- REALIZZAZIONI CORRELATE -->
-  <section class="section">
+  <section class="projects-section">
     <div class="container">
-      <p class="eyebrow mb-md">Realizzazioni con questo prodotto</p>
-      <h2 class="mb-2xl">Progetti dove abbiamo fornito ferro sagomato</h2>
-      <div class="grid grid-3">
-        <article class="case-card">
-          <img class="case-card__img" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80" alt="Cantiere residenziale con armature in ferro">
-          <div class="case-card__overlay">
-            <p class="case-card__sector">Residenziale</p>
-            <h3 class="case-card__title">Complesso residenziale, Milano</h3>
-            <p class="case-card__meta">Ferro sagomato + assemblato &middot; 2024</p>
+      <div class="section-head">
+        <p class="eyebrow mb-md">Realizzazioni con questo prodotto</p>
+        <h2 class="mb-2xl">Progetti dove abbiamo fornito ferro sagomato</h2>
+      </div>
+      <div class="projects-grid">
+        <article class="case-card case-card--featured">
+          <img class="case-card__img"
+               src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=900&q=80"
+               alt="Cantiere residenziale con armature in ferro">
+          <div class="case-card__body">
+            <span class="case-card__tag">Residenziale · Milano</span>
+            <h3 class="case-card__title">Complesso residenziale</h3>
+            <p class="case-card__meta">Ferro sagomato + assemblato · 2024</p>
           </div>
         </article>
         <article class="case-card">
-          <img class="case-card__img" src="https://images.unsplash.com/photo-1587582423116-ec07293f0395?w=600&q=80" alt="Struttura industriale in costruzione">
-          <div class="case-card__overlay">
-            <p class="case-card__sector">Industriale</p>
-            <h3 class="case-card__title">Polo logistico, Bari</h3>
-            <p class="case-card__meta">Gabbie + FERCASS &middot; 2023</p>
+          <img class="case-card__img"
+               src="https://images.unsplash.com/photo-1587582423116-ec07293f0395?w=600&q=80"
+               alt="Struttura industriale in costruzione">
+          <div class="case-card__body">
+            <span class="case-card__tag">Industriale · Bari</span>
+            <h3 class="case-card__title">Polo logistico</h3>
+            <p class="case-card__meta">Gabbie + FERCASS · 2023</p>
           </div>
         </article>
         <article class="case-card">
-          <img class="case-card__img" src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=600&q=80" alt="Fondazioni in cantiere commerciale">
-          <div class="case-card__overlay">
-            <p class="case-card__sector">Commerciale</p>
-            <h3 class="case-card__title">Centro commerciale, Lecce</h3>
-            <p class="case-card__meta">Fornitura completa ferro &middot; 2023</p>
+          <img class="case-card__img"
+               src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=600&q=80"
+               alt="Fondazioni in cantiere commerciale">
+          <div class="case-card__body">
+            <span class="case-card__tag">Commerciale · Lecce</span>
+            <h3 class="case-card__title">Centro commerciale</h3>
+            <p class="case-card__meta">Fornitura completa ferro · 2023</p>
           </div>
         </article>
       </div>
@@ -257,38 +281,43 @@
 
   <!-- FAQ -->
   <section class="section section--alt">
-    <div class="container" style="max-width: 800px;">
+    <div class="container faq-container">
       <p class="eyebrow mb-md">FAQ</p>
       <h2 class="mb-2xl">Domande frequenti sul ferro sagomato</h2>
-      <div style="display: flex; flex-direction: column; gap: var(--space-lg);">
-        <details style="border: var(--border-technical); border-radius: var(--radius-md); padding: var(--space-lg); background: var(--color-pure-white);">
-          <summary style="font-weight: 600; cursor: pointer; color: var(--color-rebar-black);">Quali diametri sono disponibili?</summary>
-          <p style="margin-top: var(--space-md); color: var(--color-steel-grey);">Ferramati lavora barre di diametro da 6 a 32 mm in acciaio B450C, conforme alla norma UNI EN 10080 e alle NTC 2018. Diametri speciali su richiesta.</p>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Quali diametri sono disponibili?</summary>
+          <p>Ferramati lavora barre di diametro da 6 a 32 mm in acciaio B450C, conforme alla norma UNI EN 10080 e alle NTC 2018. Diametri speciali su richiesta.</p>
         </details>
-        <details style="border: var(--border-technical); border-radius: var(--radius-md); padding: var(--space-lg); background: var(--color-pure-white);">
-          <summary style="font-weight: 600; cursor: pointer; color: var(--color-rebar-black);">Posso richiedere la posa in opera?</summary>
-          <p style="margin-top: var(--space-md); color: var(--color-steel-grey);">S&igrave;. Ferramati offre il servizio completo: produzione, trasporto e posa in cantiere con squadre specializzate. Contatta l'ufficio tecnico per un preventivo integrato.</p>
+        <details class="faq-item">
+          <summary>Posso richiedere la posa in opera?</summary>
+          <p>Sì. Ferramati offre il servizio completo: produzione, trasporto e posa in cantiere con squadre specializzate. Contatta l'ufficio tecnico per un preventivo integrato.</p>
         </details>
-        <details style="border: var(--border-technical); border-radius: var(--radius-md); padding: var(--space-lg); background: var(--color-pure-white);">
-          <summary style="font-weight: 600; cursor: pointer; color: var(--color-rebar-black);">Come invio il progetto per un preventivo?</summary>
-          <p style="margin-top: var(--space-md); color: var(--color-steel-grey);">Puoi inviare la distinta di sagomatura, i disegni esecutivi o il computo metrico tramite il form contatti oppure via email all'ufficio tecnico. Accettiamo PDF, DWG e file ZIP.</p>
+        <details class="faq-item">
+          <summary>Come invio il progetto per un preventivo?</summary>
+          <p>Puoi inviare la distinta di sagomatura, i disegni esecutivi o il computo metrico tramite il form contatti oppure via email all'ufficio tecnico. Accettiamo PDF, DWG e file ZIP.</p>
         </details>
-        <details style="border: var(--border-technical); border-radius: var(--radius-md); padding: var(--space-lg); background: var(--color-pure-white);">
-          <summary style="font-weight: 600; cursor: pointer; color: var(--color-rebar-black);">Il ferro &egrave; disponibile anche in Romania?</summary>
-          <p style="margin-top: var(--space-md); color: var(--color-steel-grey);">S&igrave;. Ferramati International produce ferro sagomato anche negli stabilimenti di Timișoara e Oradea, con gli stessi standard qualitativi e certificazioni.</p>
+        <details class="faq-item">
+          <summary>Il ferro è disponibile anche in Romania?</summary>
+          <p>Sì. Ferramati International produce ferro sagomato anche negli stabilimenti di Timișoara e Oradea, con gli stessi standard qualitativi e certificazioni.</p>
         </details>
       </div>
     </div>
   </section>
 
-  <!-- CTA BLOCK -->
-  <section class="cta-block">
+  <!-- CTA -->
+  <section class="cta-section">
     <div class="container">
-      <h2 class="cta-block__title">Hai un cantiere da armare?</h2>
-      <p class="cta-block__desc">Invia la distinta di sagomatura o i disegni esecutivi. Il team tecnico Ferramati verificher&agrave; le quantit&agrave; e ti ricontatter&agrave; con un preventivo dettagliato.</p>
-      <div class="cta-block__actions">
-        <a href="../contatti.html" class="btn btn--primary">Richiedi preventivo</a>
-        <a href="../contatti.html" class="btn btn--outline-white">Parla con l'ufficio tecnico</a>
+      <div class="cta-inner">
+        <div>
+          <p class="eyebrow eyebrow--blue mb-md">Inizia un progetto</p>
+          <h2 style="color:var(--pure-white);">Hai un cantiere<br>da armare?</h2>
+          <p>Invia la distinta di sagomatura o i disegni esecutivi. Il team tecnico Ferramati verificherà le quantità e ti ricontatterà con un preventivo dettagliato.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="../contatti.html" class="btn btn--primary">Richiedi preventivo</a>
+          <a href="../contatti.html" class="btn btn--ghost">Parla con l'ufficio tecnico</a>
+        </div>
       </div>
     </div>
   </section>
@@ -297,10 +326,25 @@
   <footer class="site-footer">
     <div class="container">
       <div class="site-footer__grid">
+
         <div class="site-footer__brand">
-          <img src="https://www.ferramati.ro/wp-content/uploads/2023/08/ferramati-logo-int_004.svg" alt="Ferramati" height="32" style="filter: brightness(0) invert(1);">
+          <img src="https://www.ferramati.ro/wp-content/uploads/2023/08/ferramati-logo-int_004.svg"
+               alt="Ferramati"
+               style="filter: brightness(0) invert(1); height:30px;">
           <p>Partner tecnico per l'edilizia civile e industriale. Ferro sagomato, prefabbricati in c.a. e sistemi EPS.</p>
+          <div class="site-footer__social">
+            <a href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.88 0 1.441 1.441 0 012.88 0z"/></svg>
+            </a>
+          </div>
         </div>
+
         <div>
           <h4>Prodotti</h4>
           <ul>
@@ -309,8 +353,10 @@
             <li><a href="#">Lastre tralicciate</a></li>
             <li><a href="#">Doppie lastre</a></li>
             <li><a href="#">Elementi EPS</a></li>
+            <li><a href="#">Sistema STEP</a></li>
           </ul>
         </div>
+
         <div>
           <h4>Azienda</h4>
           <ul>
@@ -321,22 +367,31 @@
             <li><a href="#">News</a></li>
           </ul>
         </div>
+
         <div>
           <h4>Sedi</h4>
           <ul>
             <li><a href="#">Fasano (BR)</a></li>
             <li><a href="#">Verdello (BG)</a></li>
-            <li><a href="#">Timisoara, Romania</a></li>
+            <li><a href="#">Timișoara, Romania</a></li>
             <li><a href="#">Oradea, Romania</a></li>
           </ul>
         </div>
+
       </div>
       <div class="site-footer__bottom">
         <span>&copy; 2026 Ferramati International S.r.l. Tutti i diritti riservati.</span>
+        <div class="site-footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookie Policy</a>
+          <a href="#">Condizioni di vendita</a>
+        </div>
         <div class="lang-switcher">
           <a href="#" class="active">IT</a>
-          <a href="../../index.html">EN</a>
-          <a href="../../ro/index.html">RO</a>
+          <span class="sep">/</span>
+          <a href="#">EN</a>
+          <span class="sep">/</span>
+          <a href="#">RO</a>
         </div>
       </div>
     </div>

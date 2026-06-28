@@ -1,0 +1,318 @@
+/* ============================================
+   ENGINEERING HERO — v1
+   Animated engineering-authority hero section
+   with SVG grid, dimension lines, crosshairs,
+   scale bar, coordinate readout.
+   ============================================ */
+
+/* --- Hero Container --- */
+.eng-hero {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--forge-black);
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 900px) {
+  .eng-hero {
+    display: grid;
+    grid-template-columns: 55fr 45fr;
+    min-height: 80vh;
+  }
+}
+
+/* Blueprint bottom border */
+.eng-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-blueprint-blue), var(--color-safety-orange), transparent);
+  opacity: 0;
+  animation: engBorderReveal 1.2s var(--ease-out) 1.6s forwards;
+  pointer-events: none;
+  z-index: 10;
+}
+@keyframes engBorderReveal {
+  from { opacity: 0; }
+  to { opacity: 0.6; }
+}
+
+/* --- Text Panel (Left) --- */
+.eng-hero__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--s-4xl) var(--pad-mob);
+  position: relative;
+  z-index: 2;
+}
+@media (min-width: 768px) {
+  .eng-hero__text { padding: var(--s-5xl) var(--pad-tab); }
+}
+@media (min-width: 1024px) {
+  .eng-hero__text { padding: var(--s-5xl) var(--s-3xl) var(--s-5xl) var(--pad-desk); }
+}
+
+/* Eyebrow label with pulsing dot */
+.eng-hero__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: var(--s-sm);
+  margin-bottom: var(--s-xl);
+  opacity: 0;
+  transform: translateY(20px);
+}
+.eng-hero__eyebrow-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--color-safety-orange);
+  animation: engPulse 2.4s ease-in-out infinite;
+}
+@keyframes engPulse {
+  0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 0 0 rgba(242, 106, 33, 0.5); }
+  50% { opacity: 0.7; transform: scale(0.85); box-shadow: 0 0 0 6px rgba(242, 106, 33, 0); }
+}
+.eng-hero__eyebrow-text {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--steel-400);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-label);
+}
+
+/* Headline */
+.eng-hero__headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: -0.025em;
+  color: var(--pure-white);
+  margin-bottom: var(--s-lg);
+}
+.eng-hero__headline em {
+  font-style: normal;
+  color: var(--color-safety-orange);
+}
+/* Each line wraps in a span for line-by-line reveal */
+.eng-hero__headline .line {
+  display: block;
+  opacity: 0;
+  transform: translateY(30px);
+  will-change: transform, opacity;
+}
+
+/* Subtitle */
+.eng-hero__sub {
+  font-family: var(--font-body);
+  font-size: var(--fs-body-lg);
+  font-weight: 400;
+  color: var(--steel-200);
+  line-height: 1.6;
+  max-width: 480px;
+  margin-bottom: var(--s-xl);
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* CTA buttons */
+.eng-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-md);
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+/* --- Image Panel (Right) --- */
+.eng-hero__visual {
+  position: relative;
+  overflow: hidden;
+  min-height: 360px;
+}
+@media (max-width: 899px) {
+  .eng-hero__visual { min-height: 320px; }
+}
+
+/* Main image */
+.eng-hero__img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: saturate(0.5) contrast(1.1);
+  opacity: 0;
+  transform: scale(1.05);
+  will-change: transform, opacity;
+}
+
+/* Blue gradient overlay */
+.eng-hero__visual::before {
+  content: '';
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(135deg, rgba(74,144,204,0.12) 0%, rgba(0,0,0,0.15) 100%);
+  pointer-events: none;
+}
+
+/* --- SVG Grid Overlay --- */
+.eng-hero__grid {
+  position: absolute; inset: 0; z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+}
+.eng-hero__grid line {
+  stroke: var(--color-blueprint-blue);
+  stroke-width: 0.5;
+  opacity: 0.3;
+}
+
+/* --- Scale Bar (left edge) --- */
+.eng-hero__scale-bar {
+  display: none;
+  position: absolute;
+  left: 0; top: 8%; bottom: 8%;
+  width: 28px;
+  z-index: 4;
+  pointer-events: none;
+}
+@media (min-width: 900px) { .eng-hero__scale-bar { display: block; } }
+
+.eng-hero__scale-bar-line {
+  position: absolute;
+  left: 13px; top: 0; bottom: 0;
+  width: 1px;
+  background: var(--color-blueprint-blue);
+  transform-origin: top;
+  transform: scaleY(0);
+  opacity: 0.7;
+}
+.eng-hero__scale-bar-ticks {
+  position: absolute;
+  left: 6px; top: 0; bottom: 0;
+  width: 16px;
+  opacity: 0;
+}
+.eng-hero__scale-bar-ticks .tick {
+  position: absolute;
+  left: 0;
+  height: 1px;
+  background: var(--color-blueprint-blue);
+  opacity: 0.6;
+}
+.eng-hero__scale-bar-ticks .tick--major { width: 14px; }
+.eng-hero__scale-bar-ticks .tick--minor { width: 7px; left: 7px; }
+
+/* --- Dimension Annotations --- */
+.eng-hero__dimension {
+  position: absolute;
+  z-index: 4;
+  pointer-events: none;
+}
+.eng-hero__dimension svg {
+  overflow: visible;
+}
+.eng-hero__dimension-text {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  fill: var(--color-blueprint-blue);
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+}
+.eng-hero__dimension-line {
+  stroke: var(--color-blueprint-blue);
+  stroke-width: 0.8;
+  opacity: 0.6;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+/* --- Corner Crosshairs --- */
+.eng-hero__crosshair {
+  position: absolute;
+  z-index: 5;
+  width: 20px; height: 20px;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0);
+}
+.eng-hero__crosshair svg {
+  width: 100%; height: 100%;
+}
+.eng-hero__crosshair--tl { top: 16px; left: 16px; }
+.eng-hero__crosshair--tr { top: 16px; right: 16px; }
+.eng-hero__crosshair--bl { bottom: 16px; left: 16px; }
+.eng-hero__crosshair--br { bottom: 16px; right: 16px; }
+
+/* --- Coordinate Readout --- */
+.eng-hero__coords {
+  position: absolute;
+  bottom: 16px; left: 36px;
+  z-index: 5;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--color-blueprint-blue);
+  letter-spacing: 0.04em;
+  opacity: 0.8;
+  pointer-events: none;
+}
+.eng-hero__coords span {
+  opacity: 0;
+  display: inline;
+}
+
+/* --- Annotations (technical labels) --- */
+.eng-hero__tech-label {
+  position: absolute; z-index: 4;
+  font-family: var(--font-mono); font-size: 10px;
+  color: rgba(74, 144, 204, 0.85);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  pointer-events: none;
+  opacity: 0;
+}
+.eng-hero__tech-label--tl { top: var(--s-xl); left: 36px; }
+.eng-hero__tech-label--br { bottom: 40px; right: var(--s-xl); text-align: right; }
+.eng-hero__tech-label-line {
+  display: block;
+  width: 32px; height: 1px;
+  background: rgba(74, 144, 204, 0.5);
+  margin-top: 5px;
+}
+
+/* --- Responsive: hide engineering elements on mobile --- */
+@media (max-width: 767px) {
+  .eng-hero__grid,
+  .eng-hero__scale-bar,
+  .eng-hero__dimension,
+  .eng-hero__crosshair,
+  .eng-hero__coords,
+  .eng-hero__tech-label {
+    display: none;
+  }
+}
+
+/* --- Reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+  .eng-hero__headline .line,
+  .eng-hero__eyebrow,
+  .eng-hero__sub,
+  .eng-hero__actions,
+  .eng-hero__img {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .eng-hero__grid,
+  .eng-hero__scale-bar-line,
+  .eng-hero__scale-bar-ticks,
+  .eng-hero__crosshair,
+  .eng-hero__coords span,
+  .eng-hero__tech-label,
+  .eng-hero__dimension-line {
+    opacity: 1 !important;
+    transform: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+  .eng-hero__eyebrow-dot {
+    animation: none;
+  }
+}

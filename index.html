@@ -92,6 +92,11 @@ td { color:var(--text2); }
   .card,.card-hi { padding:16px; }
   .comp { padding:14px; } .comp h4 { font-size:0.9rem; } .comp p { font-size:0.78rem; }
   .chart-box { min-height:280px; }
+  .slide .chart-box canvas { max-height:none !important; }
+  .slide-quadrant { padding-top:20px !important; padding-bottom:16px !important; }
+  .slide-quadrant .chart-box { min-height:calc(100vh - 140px); height:calc(100vh - 140px); }
+  .slide-quadrant h2 { font-size:1.1rem; margin-bottom:4px; }
+  .slide-quadrant .subtitle { font-size:.82rem; margin-bottom:8px; }
   table { display:block; overflow-x:auto; white-space:nowrap; -webkit-overflow-scrolling:touch; }
   th,td { padding:8px 10px; font-size:0.78rem; }
   .slide-num { bottom:12px; right:16px; font-size:11px; }
@@ -105,6 +110,7 @@ td { color:var(--text2); }
   .stat { font-size:1.6rem; } .stat-sm { font-size:1.4rem; }
   .g4 { grid-template-columns:1fr; }
   .chart-box { min-height:240px; }
+  .slide-quadrant .chart-box { min-height:calc(100vh - 120px); height:calc(100vh - 120px); }
 }
     </style>
 </head>
@@ -596,7 +602,7 @@ td { color:var(--text2); }
   <span class="slide-num">12 / 20</span>
 </div>
 <!-- S13: Quadrante 1 -->
-<div class="slide">
+<div class="slide slide-quadrant">
   <h2>Quadrante: Prezzo vs Interattivita</h2>
   <p class="subtitle">Dove si posiziona The Bull + Clonyo rispetto ai competitor</p>
   <div class="chart-box"><canvas id="q1"></canvas></div>
@@ -604,7 +610,7 @@ td { color:var(--text2); }
 </div>
 
 <!-- S14: Quadrante 2 -->
-<div class="slide">
+<div class="slide slide-quadrant">
   <h2>Quadrante: Accessibilita vs Profondita</h2>
   <p class="subtitle">L'opportunita: educazione profonda a prezzo accessibile</p>
   <div class="chart-box"><canvas id="q2"></canvas></div>

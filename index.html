@@ -1,584 +1,877 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ferramati International — Structural Steel &amp; Precast Concrete</title>
-  <meta name="description" content="Ferramati manufactures shaped rebar, precast concrete elements and EPS systems from four production facilities in Italy and Romania. One structural partner for civil and industrial construction.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/design-system.css">
-  <link rel="stylesheet" href="assets/css/hero-engineering.css">
-  <link rel="stylesheet" href="assets/css/logo-carousel.css">
-  <link rel="stylesheet" href="assets/css/mobile-menu.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>The Bull x Clonyo — Ricerca di Mercato e Pricing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+    <style>
+:root {
+    --bg: #05040F;
+    --bg2: #0B081A;
+    --section: #100B22;
+    --surface: rgba(32, 20, 74, 0.62);
+    --surface-solid: #1a1035;
+    --purple: #7B4DFF;
+    --purple-deep: #4E22D8;
+    --violet: #9B6CFF;
+    --blue: #5D8CFF;
+    --cyan: #42E8F2;
+    --turquoise: #1FE0C8;
+    --text: #FFFFFF;
+    --text2: #C9C2E6;
+    --text3: #E0DCF0;
+    --dim: #8F87B3;
+    --border: rgba(196, 177, 255, 0.28);
+    --border-light: rgba(255, 255, 255, 0.14);
+    --glow-purple: rgba(123, 77, 255, 0.55);
+    --glow-cyan: rgba(66, 232, 242, 0.45);
+    --gradient-primary: linear-gradient(90deg, #7B4DFF 0%, #42E8F2 100%);
+    --gradient-text: linear-gradient(90deg, #FFFFFF 0%, #9B6CFF 50%, #42E8F2 100%);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter','Plus Jakarta Sans',-apple-system,sans-serif; background:var(--bg); color:var(--text); overflow:hidden; height:100vh; }
+.slide { display:none; width:100vw; height:100vh; padding:54px 72px; flex-direction:column; justify-content:center; position:relative; overflow-y:auto; }
+.slide.active { display:flex; }
+.slide-num { position:absolute; bottom:24px; right:36px; font-size:12px; color:var(--dim); letter-spacing:0.5px; }
+h1 { font-family:'Plus Jakarta Sans',sans-serif; font-size:3.2rem; font-weight:800; line-height:1.05; margin-bottom:20px; }
+h2 { font-family:'Plus Jakarta Sans',sans-serif; font-size:2.2rem; font-weight:700; line-height:1.15; margin-bottom:16px; color:var(--text); }
+h3 { font-family:'Plus Jakarta Sans',sans-serif; font-size:1.2rem; font-weight:600; color:var(--violet); margin-bottom:10px; }
+p,li { font-size:1rem; line-height:1.65; color:var(--text2); }
+.hi { background:var(--gradient-primary); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-weight:700; }
+.subtitle { font-size:1.15rem; color:var(--text2); margin-bottom:32px; line-height:1.5; }
+.g2 { display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:start; }
+.g3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; }
+.g4 { display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:16px; }
+.card { background:linear-gradient(180deg, rgba(42,26,97,0.72) 0%, rgba(12,8,30,0.78) 100%); border:1px solid var(--border); border-radius:14px; padding:24px; backdrop-filter:blur(12px); box-shadow:inset 0 1px 0 rgba(255,255,255,0.08), 0 8px 32px rgba(37,18,99,0.2); }
+.card-hi { background:linear-gradient(180deg, rgba(60,36,130,0.8) 0%, rgba(14,9,32,0.85) 100%); border:2px solid var(--purple); border-radius:14px; padding:24px; backdrop-filter:blur(12px); box-shadow:0 0 24px rgba(123,77,255,0.25), inset 0 1px 0 rgba(255,255,255,0.1); }
+.stat { font-family:'Plus Jakarta Sans',sans-serif; font-size:2.8rem; font-weight:800; background:var(--gradient-primary); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; line-height:1; }
+.stat-sm { font-family:'Plus Jakarta Sans',sans-serif; font-size:2.2rem; font-weight:800; background:var(--gradient-primary); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; line-height:1; }
+.label { font-size:0.78rem; color:var(--dim); margin-top:6px; text-transform:uppercase; letter-spacing:0.6px; font-weight:500; }
+.chart-box { position:relative; width:100%; min-height:380px; }
+table { width:100%; border-collapse:collapse; margin-top:12px; }
+th,td { padding:11px 14px; text-align:left; border-bottom:1px solid var(--border); font-size:0.9rem; }
+th { color:var(--cyan); font-weight:600; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.5px; }
+td { color:var(--text2); }
+.tag { display:inline-block; padding:4px 10px; border-radius:6px; font-size:0.72rem; font-weight:600; }
+.t-free { background:rgba(31,224,200,0.15); color:#1FE0C8; border:1px solid rgba(31,224,200,0.3); }
+.t-low { background:rgba(93,140,255,0.15); color:#93c5fd; border:1px solid rgba(93,140,255,0.3); }
+.t-mid { background:rgba(155,108,255,0.15); color:#c4b5fd; border:1px solid rgba(155,108,255,0.3); }
+.t-high { background:rgba(255,95,138,0.15); color:#fca5c0; border:1px solid rgba(255,95,138,0.3); }
+.progress { position:fixed; top:0; left:0; height:3px; background:var(--gradient-primary); transition:width .3s; z-index:100; }
+.badge { display:inline-block; padding:6px 16px; border:1px solid var(--purple); border-radius:20px; font-size:0.78rem; color:var(--violet); margin-bottom:20px; font-weight:600; letter-spacing:0.3px; }
+.comp { background:linear-gradient(180deg, rgba(42,26,97,0.6) 0%, rgba(12,8,30,0.7) 100%); border:1px solid var(--border); border-radius:12px; padding:18px; transition:border-color .2s, box-shadow .2s; backdrop-filter:blur(8px); }
+.comp:hover { border-color:var(--purple); box-shadow:0 0 16px rgba(123,77,255,0.2); }
+.comp h4 { font-family:'Plus Jakarta Sans',sans-serif; font-size:1rem; font-weight:700; color:var(--text); margin-bottom:6px; display:flex; align-items:center; gap:8px; }
+.comp p { font-size:0.82rem; color:var(--dim); line-height:1.5; }
+.comp .pt { display:inline-block; margin-top:8px; padding:3px 8px; border-radius:4px; font-size:0.75rem; font-weight:600; }
+.comp-logo { width:20px; height:20px; border-radius:4px; object-fit:contain; flex-shrink:0; }
+.competitor-header { display:flex; align-items:center; gap:14px; margin-bottom:8px; }
+.competitor-logo { width:36px; height:36px; border-radius:8px; object-fit:contain; border:1px solid var(--border); background:rgba(255,255,255,0.05); flex-shrink:0; }
+.nav-hint { position:fixed; bottom:16px; left:50%; transform:translateX(-50%); font-size:11px; color:var(--dim); opacity:.4; }
+.sources { margin-top:auto; padding-top:12px; border-top:1px solid var(--border); }
+.sources .sources-label { font-size:.72rem; color:var(--dim); font-weight:600; letter-spacing:0.3px; text-transform:uppercase; margin-bottom:6px; }
+.sources ul { list-style:none; padding:0; display:flex; flex-wrap:wrap; gap:6px 14px; }
+.sources li { font-size:.72rem; }
+.sources a { color:var(--violet); text-decoration:none; transition:color .2s; }
+.sources a:hover { color:var(--cyan); text-decoration:underline; }
+.nav-arrows { display:none; }
+@media(max-width:768px){
+  .slide { padding:24px 20px; justify-content:flex-start; padding-top:40px; }
+  h1 { font-size:1.8rem; } h2 { font-size:1.4rem; } h3 { font-size:1.05rem; }
+  p,li { font-size:0.9rem; } .subtitle { font-size:0.95rem; margin-bottom:18px; }
+  .stat { font-size:2rem; } .stat-sm { font-size:1.6rem; }
+  .g2,.g3 { grid-template-columns:1fr; gap:12px; }
+  .g4 { grid-template-columns:1fr 1fr; gap:12px; }
+  .card,.card-hi { padding:16px; }
+  .comp { padding:14px; } .comp h4 { font-size:0.9rem; } .comp p { font-size:0.78rem; }
+  .chart-box { min-height:280px; }
+  table { display:block; overflow-x:auto; white-space:nowrap; -webkit-overflow-scrolling:touch; }
+  th,td { padding:8px 10px; font-size:0.78rem; }
+  .slide-num { bottom:12px; right:16px; font-size:11px; }
+  .nav-hint { display:none; }
+  .nav-arrows { display:flex; position:fixed; bottom:20px; left:50%; transform:translateX(-50%); gap:16px; z-index:200; }
+  .nav-arrows button { width:44px; height:44px; border-radius:50%; border:1px solid var(--border); background:var(--surface-solid); color:var(--text); font-size:1.2rem; display:flex; align-items:center; justify-content:center; cursor:pointer; -webkit-tap-highlight-color:transparent; touch-action:manipulation; }
+  .nav-arrows button:active { background:var(--purple); color:var(--bg); }
+  canvas { touch-action:pan-x pan-y; pointer-events:none; }
+}
+@media(max-width:480px){
+  .slide { padding:18px 14px; padding-top:32px; }
+  h1 { font-size:1.5rem; } h2 { font-size:1.2rem; }
+  .stat { font-size:1.6rem; } .stat-sm { font-size:1.4rem; }
+  .g4 { grid-template-columns:1fr; }
+  .chart-box { min-height:240px; }
+}
+    </style>
 </head>
 <body>
+<div class="progress" id="prog"></div>
+<!-- S1: Cover -->
+<div class="slide active">
+  <div class="badge">Ricerca di Mercato & Strategia Pricing</div>
+  <h1>The Bull <span class="hi">x</span> Clonyo</h1>
+  <p class="subtitle">Posizionamento competitivo e strategia di pricing per il tutor AI<br>di finanza personale n.1 in Italia</p>
+  <p style="color:var(--dim);font-size:.85rem;margin-top:36px">Giugno 2026</p>
+  <span class="slide-num">1 / 20</span>
+</div>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container">
-      <a href="index.html" class="site-header__logo">
-        <img src="https://www.ferramati.ro/wp-content/uploads/2023/08/ferramati-logo-int_004.svg"
-             alt="Ferramati International"
-             style="filter: brightness(0) invert(1);">
-      </a>
-      <nav class="site-header__nav" aria-label="Main navigation">
-        <a href="en/about.html">About</a>
-        <a href="en/products/index.html">Products</a>
-        <a href="#solutions">Solutions</a>
-        <a href="en/projects/index.html">Projects</a>
-        <a href="en/news/index.html">News</a>
-        <a href="en/contatti.html">Contact</a>
-      </nav>
-      <div class="site-header__actions">
-        <div class="lang-switcher" aria-label="Language selector">
-          <a href="it/index.html">IT</a>
-          <span class="sep">/</span>
-          <a href="index.html" class="active">EN</a>
-          <span class="sep">/</span>
-          <a href="ro/index.html">RO</a>
-        </div>
-        <a href="en/contatti.html" class="btn btn--primary btn--sm">Request a quote</a>
-        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
-            <line x1="2" y1="5" x2="18" y2="5"/>
-            <line x1="2" y1="10" x2="18" y2="10"/>
-            <line x1="2" y1="15" x2="18" y2="15"/>
-          </svg>
-        </button>
-      </div>
+<!-- S2: Il mercato -->
+<div class="slide">
+  <h2>Il mercato italiano dell'educazione finanziaria</h2>
+  <p class="subtitle">Un settore in crescita, frammentato su 4 fasce di prezzo</p>
+  <div class="g3" style="margin-top:12px">
+    <div class="card" style="text-align:center">
+      <div class="stat" style="-webkit-text-fill-color:var(--turquoise);color:var(--turquoise);background:none">€0</div>
+      <div class="label">Fascia gratuita</div>
+      <p style="margin-top:10px;font-size:.88rem;color:var(--text2)">Podcast, YouTube, blog</p>
+      <p style="font-size:.8rem;color:var(--dim);margin-top:4px">The Bull, Coletti, Mr RIP</p>
     </div>
-  </header>
-
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <div class="mobile-menu__header">
-      <a href="index.html" class="site-header__logo">
-        <img src="https://www.ferramati.ro/wp-content/uploads/2023/08/ferramati-logo-int_004.svg"
-             alt="Ferramati International"
-             style="filter: brightness(0) invert(1); height: 34px;">
-      </a>
-      <button class="mobile-menu__close" aria-label="Close menu">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
-          <line x1="4" y1="4" x2="16" y2="16"/>
-          <line x1="16" y1="4" x2="4" y2="16"/>
-        </svg>
-      </button>
+    <div class="card" style="text-align:center">
+      <div class="stat" style="-webkit-text-fill-color:var(--blue);color:var(--blue);background:none">€29–99</div>
+      <div class="label">Entry / anno</div>
+      <p style="margin-top:10px;font-size:.88rem;color:var(--text2)">Community, membership</p>
+      <p style="font-size:.8rem;color:var(--dim);margin-top:4px">NowTrade, Moneysurfers Ess.</p>
     </div>
-    <nav class="mobile-menu__nav" aria-label="Mobile navigation">
-      <a href="en/about.html">About</a>
-      <a href="en/products/index.html">Products</a>
-      <a href="#solutions">Solutions</a>
-      <a href="en/projects/index.html">Projects</a>
-      <a href="en/news/index.html">News</a>
-      <a href="en/contatti.html">Contact</a>
-    </nav>
-    <div class="mobile-menu__footer">
-      <div class="lang-switcher">
-        <a href="it/index.html">IT</a>
-        <span class="sep">/</span>
-        <a href="index.html" class="active">EN</a>
-        <span class="sep">/</span>
-        <a href="ro/index.html">RO</a>
-      </div>
-      <a href="en/contatti.html" class="btn btn--primary" style="width:100%; justify-content:center;">Request a quote</a>
+    <div class="card" style="text-align:center">
+      <div class="stat">€100–3K</div>
+      <div class="label">Mid-ticket one-shot</div>
+      <p style="margin-top:10px;font-size:.88rem;color:var(--text2)">Corsi completi, percorsi</p>
+      <p style="font-size:.8rem;color:var(--dim);margin-top:4px">Casario, Affari Miei, Plannix</p>
     </div>
   </div>
-
-  <!-- HERO -->
-  <section class="hero" id="group">
-
-    <!-- Left: text -->
-    <div class="hero__text">
-      <div class="hero__label">
-        <span class="hero__label-dot" aria-hidden="true"></span>
-        <span class="hero__label-text">Fasano · Verdello · Timișoara · Oradea</span>
-      </div>
-
-      <h1 class="hero__headline">
-        From rebar<br>
-        to precast.<br>
-        <em>One producer.</em>
-      </h1>
-
-      <p class="hero__sub">
-        Ferramati manufactures shaped rebar and precast concrete elements
-        from four production facilities in Italy and Romania.
-        One technical partner. No coordination overhead.
-      </p>
-
-      <div class="hero__actions">
-        <a href="en/contatti.html" class="btn btn--primary">Send technical documents</a>
-        <a href="#products" class="btn btn--ghost">Explore products</a>
-      </div>
-    </div>
-
-    <!-- Right: image with signature calibration scale -->
-    <div class="hero__image" aria-hidden="true">
-      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80"
-           alt="">
-      <span class="hero__annotation hero__annotation--tl">
-        <span class="hero__annotation-line"></span>
-        B450C · UNI EN 10080
-      </span>
-      <span class="hero__annotation hero__annotation--br">
-        ferramati.com
-        <span class="hero__annotation-line" style="margin-left:auto;"></span>
-      </span>
-
-      <!-- Signature element: engineering calibration scale -->
-      <div class="hero__scale">
-        <div class="hero__scale-line"></div>
-        <div class="hero__scale-ticks"></div>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- MEASURE STRIP -->
-  <div class="measure-strip">
-    <div class="container">
-      <div class="measure-item">
-        <div class="measure-item__value">25+</div>
-        <div class="measure-item__label">Years in production</div>
-      </div>
-      <div class="measure-item">
-        <div class="measure-item__value">4</div>
-        <div class="measure-item__label">Production facilities</div>
-      </div>
-      <div class="measure-item">
-        <div class="measure-item__value">IT · RO</div>
-        <div class="measure-item__label">Markets served</div>
-      </div>
-      <div class="measure-item">
-        <div class="measure-item__value">100%</div>
-        <div class="measure-item__label">Integrated supply</div>
+  <div class="card" style="margin-top:16px;border-color:rgba(255,95,138,0.4)">
+    <div style="display:flex;align-items:center;gap:20px">
+      <div class="stat" style="-webkit-text-fill-color:#FF5F8A;color:#FF5F8A;background:none">€1K–5K+</div>
+      <div>
+        <div class="label">High-ticket</div>
+        <p style="font-size:.88rem;margin-top:4px;color:var(--text2)">Coaching, consulenza 1:1, club premium</p>
+        <p style="font-size:.8rem;color:var(--dim)">Alfio Bardolla, Affari Miei FIP, Trading Millimetrico, Plannix Private</p>
       </div>
     </div>
   </div>
-
-  <!-- LOGO CAROUSEL — Social proof -->
-  <section class="logo-carousel" aria-label="Trusted by leading contractors">
-    <div class="logo-carousel__label">
-      <p>Trusted by contractors and general contractors across Italy and Europe</p>
+  <span class="slide-num">2 / 20</span>
+</div>
+<!-- S3: Competitor Overview -->
+<div class="slide">
+  <h2>I competitor nel dettaglio</h2>
+  <p class="subtitle">Chi sono, cosa offrono, quanto costano</p>
+  <div class="g4">
+    <div class="comp"><h4><img src="https://www.google.com/s2/favicons?domain=alfiobardolla.com&sz=32" class="comp-logo" alt="">Alfio Bardolla</h4><p>Formazione premium. Eventi live "Wake Up Call" come entry, upsell coaching. Quotata, €22M rev/anno.</p><span class="pt t-high">318–5.000€+</span></div>
+    <div class="comp"><h4><img src="https://www.google.com/s2/favicons?domain=marcocasario.com&sz=32" class="comp-logo" alt="">Marco Casario</h4><p>The 10Min Trader: corso 200+ ore, 45 strategie. Trading Room inclusa 1 anno. High-ticket.</p><span class="pt t-high">3.000€</span></div>
+    <div class="comp"><h4><img src="https://www.google.com/s2/favicons?domain=moneysurfers.com&sz=32" class="comp-logo" alt="">Moneysurfers</h4><p>Corsi verticali + Inner Circle (Essential/Pro). Stock Mastery con AI. App gratuita lead magnet.</p><span class="pt t-mid">99€/a – 2.595€</span></div>
+    <div class="comp"><h4><img src="https://www.google.com/s2/favicons?domain=affarimiei.biz&sz=32" class="comp-logo" alt="">Affari Miei</h4><p>Blog top SEO (86k visite/mese). Corsi one-shot + club FIP con portafogli modello annuale.</p><span class="pt t-high">97€ – 1.997€/a</span></div>
+    <div class="comp"><h4><img src="https://www.google.com/s2/favicons?domain=filippoangeloni.com&sz=32" class="comp-logo" alt="">Filippo Angeloni</h4><p>Consulente indipendente (Athena SCF) + formazione. Community 7.000+ investitori. Pricing riservato.</p><span class="pt t-mid">Non pubblico</span></div>
+    <div class="comp"><h4><img src="https://www.google.com/s2/favicons?domain=nowtrade.it&sz=32" class="comp-logo" alt="">NowTrade</h4><p>Suite BOT + segnali trading sportivo/betting. Mentorship con corsi + live chat. Entry basso.</p><span class="pt t-low">29,99€/mese</span></div>
+    <div class="comp"><h4><img src="https://www.google.com/s2/favicons?domain=educatiefinanziati.it&sz=32" class="comp-logo" alt="">Paolo Coletti</h4><p>Professore. "Educati e Finanziati" YouTube: corso completo gratuito. Competitor di attenzione.</p><span class="pt t-free">Gratuito</span></div>
+    <div class="comp"><h4><img src="https://www.google.com/s2/favicons?domain=ioinvesto.net&sz=32" class="comp-logo" alt="">IoInvesto SCF</h4><p>La piu grande SCF italiana (500M+ AUM). Fee-only senza conflitti. Analisi gratuita come lead.</p><span class="pt t-mid">0,7–1% AUM</span></div>
+    <div class="comp"><h4><img src="https://www.google.com/s2/favicons?domain=plannix.co&sz=32" class="comp-logo" alt="">Luca Lixi / Plannix</h4><p>Educazione finanziaria indipendente + consulenza fee-only flat. Corsi, community WikiLix, piattaforma Plannix.</p><span class="pt t-high">290–4.900€+</span></div>
+  </div>
+  <span class="slide-num">3 / 20</span>
+</div>
+<!-- S4: Alfio Bardolla -->
+<div class="slide">
+  <div class="badge">Competitor 1/9</div>
+  <div class="competitor-header">
+    <img src="https://www.google.com/s2/favicons?domain=alfiobardolla.com&sz=64" class="competitor-logo" alt="Alfio Bardolla">
+    <div><h2 style="margin-bottom:0">Alfio Bardolla Training Group</h2></div>
+  </div>
+  <p class="subtitle">Formazione premium — eventi live + coaching high-ticket</p>
+  <div class="g2">
+    <div>
+      <table>
+        <thead><tr><th>Prodotto</th><th>Prezzo</th></tr></thead>
+        <tbody>
+          <tr><td>Wake Up Call — Basic</td><td><span class="tag t-mid">318€ + IVA</span></td></tr>
+          <tr><td>Wake Up Call — Premium</td><td><span class="tag t-mid">478€ + IVA</span></td></tr>
+          <tr><td>Wake Up Call — Elite</td><td><span class="tag t-high">997€ + IVA</span></td></tr>
+          <tr><td>Wake Up Call — Livestream</td><td><span class="tag t-mid">199–278€ + IVA</span></td></tr>
+          <tr><td>Corsi premium (trading, immobiliare)</td><td><span class="tag t-high">2.000–5.000€+</span></td></tr>
+          <tr><td>Coaching individuale</td><td><span class="tag t-high">5.000–10.000€+</span></td></tr>
+        </tbody>
+      </table>
     </div>
-    <div class="logo-carousel__track-wrapper">
-      <div class="logo-carousel__track">
-        <!-- Set 1 -->
-        <div class="logo-carousel__item">
-          <svg viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="24" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="800" letter-spacing="2" fill="#1A1E22">WEBUILD</text></svg>
-        </div>
-        <div class="logo-carousel__item">
-          <svg viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="23" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-weight="400" font-style="italic" fill="#2F3437">Pizzarotti</text></svg>
-        </div>
-        <div class="logo-carousel__item">
-          <svg viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="24" font-family="'Arial Black', 'Helvetica Neue', sans-serif" font-size="22" font-weight="900" fill="#111416">CMB</text><text x="58" y="24" font-family="'Courier New', monospace" font-size="9" font-weight="400" fill="#6F7478" letter-spacing="1">CARPI</text></svg>
-        </div>
-        <div class="logo-carousel__item">
-          <svg viewBox="0 0 210 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="23" font-family="'Trebuchet MS', 'Gill Sans', sans-serif" font-size="13" font-weight="600" letter-spacing="3" fill="#2F3437">RIZZANI DE ECCHER</text></svg>
-        </div>
-        <div class="logo-carousel__item">
-          <svg viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="24" font-family="'Impact', 'Arial Narrow', sans-serif" font-size="22" font-weight="400" fill="#1A1E22">COGEIS</text></svg>
-        </div>
-        <div class="logo-carousel__item">
-          <svg viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="23" font-family="'Palatino Linotype', 'Book Antiqua', serif" font-size="18" font-weight="700" fill="#2F3437">CONDOTTE</text></svg>
-        </div>
-        <div class="logo-carousel__item">
-          <svg viewBox="0 0 210 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="22" font-family="'DM Sans', 'Helvetica Neue', sans-serif" font-size="12" font-weight="500" letter-spacing="4" fill="#2F3437">ITALIANA COSTRUZIONI</text></svg>
-        </div>
-        <div class="logo-carousel__item">
-          <svg viewBox="0 0 130 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="24" font-family="'Futura', 'Century Gothic', sans-serif" font-size="18" font-weight="300" letter-spacing="5" fill="#111416">CARRON</text></svg>
-        </div>
-        <div class="logo-carousel__item">
-          <svg viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="24" font-family="'Verdana', Geneva, sans-serif" font-size="16" font-weight="700" fill="#2F3437">Percassi</text></svg>
-        </div>
-        <div class="logo-carousel__item">
-          <svg viewBox="0 0 190 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="20" font-family="'Lucida Console', monospace" font-size="10" font-weight="400" letter-spacing="2" fill="#6F7478">IMPRESA</text><text x="0" y="30" font-family="'Georgia', serif" font-size="13" font-weight="700" fill="#1A1E22">RAVENNATE</text></svg>
-        </div>
-        <!-- Set 2 (duplicate for seamless loop) -->
-        <div class="logo-carousel__item">
-          <svg viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="24" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="800" letter-spacing="2" fill="#1A1E22">WEBUILD</text></svg>
-        </div>
-        <div class="logo-carousel__item">
-          <svg viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="23" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-weight="400" font-style="italic" fill="#2F3437">Pizzarotti</text></svg>
-        </div>
-        <div class="logo-carousel__item">
-          <svg viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="24" font-family="'Arial Black', 'Helvetica Neue', sans-serif" font-size="22" font-weight="900" fill="#111416">CMB</text><text x="58" y="24" font-family="'Courier New', monospace" font-size="9" font-weight="400" fill="#6F7478" letter-spacing="1">CARPI</text></svg>
-        </div>
-        <div class="logo-carousel__item">
-          <svg viewBox="0 0 210 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="23" font-family="'Trebuchet MS', 'Gill Sans', sans-serif" font-size="13" font-weight="600" letter-spacing="3" fill="#2F3437">RIZZANI DE ECCHER</text></svg>
-        </div>
-        <div class="logo-carousel__item">
-          <svg viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="24" font-family="'Impact', 'Arial Narrow', sans-serif" font-size="22" font-weight="400" fill="#1A1E22">COGEIS</text></svg>
-        </div>
-        <div class="logo-carousel__item">
-          <svg viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="23" font-family="'Palatino Linotype', 'Book Antiqua', serif" font-size="18" font-weight="700" fill="#2F3437">CONDOTTE</text></svg>
-        </div>
-        <div class="logo-carousel__item">
-          <svg viewBox="0 0 210 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="22" font-family="'DM Sans', 'Helvetica Neue', sans-serif" font-size="12" font-weight="500" letter-spacing="4" fill="#2F3437">ITALIANA COSTRUZIONI</text></svg>
-        </div>
-        <div class="logo-carousel__item">
-          <svg viewBox="0 0 130 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="24" font-family="'Futura', 'Century Gothic', sans-serif" font-size="18" font-weight="300" letter-spacing="5" fill="#111416">CARRON</text></svg>
-        </div>
-        <div class="logo-carousel__item">
-          <svg viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="24" font-family="'Verdana', Geneva, sans-serif" font-size="16" font-weight="700" fill="#2F3437">Percassi</text></svg>
-        </div>
-        <div class="logo-carousel__item">
-          <svg viewBox="0 0 190 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="20" font-family="'Lucida Console', monospace" font-size="10" font-weight="400" letter-spacing="2" fill="#6F7478">IMPRESA</text><text x="0" y="30" font-family="'Georgia', serif" font-size="13" font-weight="700" fill="#1A1E22">RAVENNATE</text></svg>
-        </div>
+    <div>
+      <div class="card" style="margin-bottom:14px">
+        <h3>Modello di business</h3>
+        <p style="font-size:.92rem">Ticket one-shot per eventi + upsell corsi/coaching via funnel. Societa quotata AIM Italia.</p>
+      </div>
+      <div class="card" style="margin-bottom:14px">
+        <h3>Lead Magnet</h3>
+        <p style="font-size:.92rem">Corsi gratuiti, ebook, blog, YouTube</p>
+      </div>
+      <div class="card">
+        <div class="stat-sm" style="-webkit-text-fill-color:#FF5F8A;color:#FF5F8A;background:none">€22M</div>
+        <div class="label">Revenue annuo (AIM Italia)</div>
       </div>
     </div>
-  </section>
-
-  <!-- PRODUCTS -->
-  <section class="products-section" id="products">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow eyebrow--blue mb-md">Product range</p>
-          <h2 style="color:var(--pure-white);">Structural solutions<br>rebar to slab</h2>
-        </div>
-        <a href="#" class="btn btn--ghost" style="align-self:flex-end;">Full catalogue &rarr;</a>
-      </div>
-
-      <div class="product-grid">
-
-        <article class="product-card">
-          <p class="product-card__index">PRD-001</p>
-          <span class="product-card__tag">Reinforcement</span>
-          <h3 class="product-card__title">Shaped &amp; Assembled Rebar</h3>
-          <p class="product-card__desc">Cut, bent and assembled reinforcing steel for civil and industrial reinforced concrete structures. Project-specific shaping on CNC lines.</p>
-          <div class="product-card__specs">
-            <div class="product-card__spec">
-              <span class="product-card__spec-key">Steel grade</span>
-              <span class="product-card__spec-val">B450C</span>
-            </div>
-            <div class="product-card__spec">
-              <span class="product-card__spec-key">Standard</span>
-              <span class="product-card__spec-val">UNI EN 10080</span>
-            </div>
-            <div class="product-card__spec">
-              <span class="product-card__spec-key">Diameter</span>
-              <span class="product-card__spec-val">6 — 32 mm</span>
-            </div>
-          </div>
-          <a href="it/prodotti/ferro-sagomato.html" class="product-card__link">
-            View product
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M2 7h10M8 3l4 4-4 4"/>
-            </svg>
-          </a>
-        </article>
-
-        <article class="product-card">
-          <p class="product-card__index">PRD-002</p>
-          <span class="product-card__tag">Precast concrete</span>
-          <h3 class="product-card__title">Lattice Slabs &amp; Double Walls</h3>
-          <p class="product-card__desc">Precast reinforced concrete elements for floors and walls in civil and industrial buildings. Custom dimensions, reduced site time.</p>
-          <div class="product-card__specs">
-            <div class="product-card__spec">
-              <span class="product-card__spec-key">Yield strength</span>
-              <span class="product-card__spec-val">&ge; 450 MPa</span>
-            </div>
-            <div class="product-card__spec">
-              <span class="product-card__spec-key">Certification</span>
-              <span class="product-card__spec-val">CE / NTC 2018</span>
-            </div>
-            <div class="product-card__spec">
-              <span class="product-card__spec-key">Thickness range</span>
-              <span class="product-card__spec-val">4 — 32 mm</span>
-            </div>
-          </div>
-          <a href="#" class="product-card__link">
-            View product
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M2 7h10M8 3l4 4-4 4"/>
-            </svg>
-          </a>
-        </article>
-
-        <article class="product-card">
-          <p class="product-card__index">PRD-003</p>
-          <span class="product-card__tag">Lightweight systems</span>
-          <h3 class="product-card__title">EPS Elements for Construction</h3>
-          <p class="product-card__desc">Expanded polystyrene sheets, lightening beads and custom mouldings for floor slabs, walls and structural insulation systems.</p>
-          <div class="product-card__specs">
-            <div class="product-card__spec">
-              <span class="product-card__spec-key">Application</span>
-              <span class="product-card__spec-val">Floor / Wall / Roof</span>
-            </div>
-            <div class="product-card__spec">
-              <span class="product-card__spec-key">Shaping</span>
-              <span class="product-card__spec-val">CNC milling</span>
-            </div>
-            <div class="product-card__spec">
-              <span class="product-card__spec-key">STEP System</span>
-              <span class="product-card__spec-val">Available</span>
-            </div>
-          </div>
-          <a href="#" class="product-card__link">
-            View product
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M2 7h10M8 3l4 4-4 4"/>
-            </svg>
-          </a>
-        </article>
-
+  </div>
+  <div class="sources"><div class="sources-label">Fonti</div><ul>
+    <li><a href="https://www.alfiobardolla.com" target="_blank" rel="noopener">alfiobardolla.com</a></li>
+    <li><a href="https://lp.alfiobardolla.com/acquista-ora-wake-up-call/" target="_blank" rel="noopener">Wake Up Call — Acquista ora</a></li>
+    <li><a href="https://www.alfiobardolla.com/wake-up-call-acquista-ora/" target="_blank" rel="noopener">Wake Up Call — Prezzi</a></li>
+  </ul></div>
+  <span class="slide-num">4 / 20</span>
+</div>
+<!-- S5: Marco Casario -->
+<div class="slide">
+  <div class="badge">Competitor 2/9</div>
+  <div class="competitor-header">
+    <img src="https://www.google.com/s2/favicons?domain=marcocasario.com&sz=64" class="competitor-logo" alt="Marco Casario">
+    <div><h2 style="margin-bottom:0">Marco Casario — The 10Min Trader</h2></div>
+  </div>
+  <p class="subtitle">Corso high-ticket completo + Trading Room privata</p>
+  <div class="g2">
+    <div>
+      <table>
+        <thead><tr><th>Prodotto</th><th>Prezzo</th></tr></thead>
+        <tbody>
+          <tr><td>The 10Min Trader Complete Course</td><td><span class="tag t-high">3.000€ one-shot</span></td></tr>
+          <tr><td>Trading Room privata</td><td><span class="tag t-free">Inclusa 1 anno</span></td></tr>
+        </tbody>
+      </table>
+      <div class="card" style="margin-top:16px">
+        <h3>Dettagli corso</h3>
+        <ul style="list-style:none;padding:0">
+          <li style="padding:5px 0;font-size:.9rem;color:var(--text2)">200+ ore di contenuti</li>
+          <li style="padding:5px 0;font-size:.9rem;color:var(--text2)">45+ strategie operative</li>
+          <li style="padding:5px 0;font-size:.9rem;color:var(--text2)">Accesso community corsisti</li>
+        </ul>
       </div>
     </div>
-  </section>
-
-  <!-- WHY FERRAMATI -->
-  <section class="why-section" id="solutions">
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow mb-md">Why Ferramati</p>
-        <h2 class="mb-3xl">One partner for the entire<br>structural supply chain</h2>
+    <div>
+      <div class="card" style="margin-bottom:14px">
+        <h3>Modello di business</h3>
+        <p style="font-size:.92rem">High-ticket one-shot con community inclusa per 1 anno. Funnel basato su webinar gratuiti.</p>
       </div>
-
-      <div class="why-grid">
-
-        <div class="why-item">
-          <svg class="why-item__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
-            <rect x="4" y="4" width="32" height="32" rx="1"/>
-            <line x1="4" y1="14" x2="36" y2="14"/>
-            <line x1="4" y1="26" x2="36" y2="26"/>
-            <line x1="14" y1="4" x2="14" y2="36"/>
-            <line x1="26" y1="4" x2="26" y2="36"/>
-          </svg>
-          <h4 class="why-item__title">Integrated supply</h4>
-          <p class="why-item__desc">Rebar and precast from the same producer. One order, one quality standard, one delivery schedule across both countries.</p>
-        </div>
-
-        <div class="why-item">
-          <svg class="why-item__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
-            <circle cx="20" cy="20" r="16"/>
-            <polyline points="20,10 20,20 27,25"/>
-            <line x1="20" y1="4" x2="20" y2="7"/>
-            <line x1="36" y1="20" x2="33" y2="20"/>
-          </svg>
-          <h4 class="why-item__title">Faster site time</h4>
-          <p class="why-item__desc">Prefabricated elements reduce on-site labour and compress project timelines. Delivery coordinated to your pour schedule.</p>
-        </div>
-
-        <div class="why-item">
-          <svg class="why-item__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
-            <polygon points="20,4 36,30 4,30"/>
-            <line x1="20" y1="16" x2="20" y2="24"/>
-            <circle cx="20" cy="26" r="1" fill="currentColor" stroke="none"/>
-          </svg>
-          <h4 class="why-item__title">Engineering support</h4>
-          <p class="why-item__desc">Technical team available for design review, structural detailing, and project coordination at every phase.</p>
-        </div>
-
-        <div class="why-item">
-          <svg class="why-item__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
-            <circle cx="20" cy="12" r="6"/>
-            <circle cx="8" cy="32" r="5"/>
-            <circle cx="32" cy="32" r="5"/>
-            <line x1="20" y1="18" x2="8" y2="27"/>
-            <line x1="20" y1="18" x2="32" y2="27"/>
-          </svg>
-          <h4 class="why-item__title">International presence</h4>
-          <p class="why-item__desc">Production in Fasano, Verdello, Timișoara and Oradea. Local delivery and technical service across Italy and Romania.</p>
-        </div>
-
+      <div class="card" style="margin-bottom:14px">
+        <h3>Lead Magnet</h3>
+        <p style="font-size:.92rem">YouTube (video didattici e live), webinar gratuiti, "10Min Live Trading" gratuito</p>
+      </div>
+      <div class="card">
+        <div class="stat-sm">3.000€</div>
+        <div class="label">Prezzo unico — nessun abbonamento</div>
       </div>
     </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="projects-section" id="projects">
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow mb-md">Projects</p>
-        <h2 class="mb-2xl">Structural proof, delivered</h2>
+  </div>
+  <div class="sources"><div class="sources-label">Fonti</div><ul>
+    <li><a href="https://www.marcocasario.com/the10mintrader/" target="_blank" rel="noopener">The 10Min Trader — Sito ufficiale</a></li>
+    <li><a href="https://the-10min-trader.teachable.com/p/the-10min-trader-complete-course" target="_blank" rel="noopener">Teachable — Corso completo</a></li>
+    <li><a href="https://www.tradingonline.me/investitori/marco-casario-trader" target="_blank" rel="noopener">tradingonline.me — Range prezzo</a></li>
+  </ul></div>
+  <span class="slide-num">5 / 20</span>
+</div>
+<!-- S6: Moneysurfers -->
+<div class="slide">
+  <div class="badge">Competitor 3/9</div>
+  <div class="competitor-header">
+    <img src="https://www.google.com/s2/favicons?domain=moneysurfers.com&sz=64" class="competitor-logo" alt="Moneysurfers">
+    <div><h2 style="margin-bottom:0">Moneysurfers</h2></div>
+  </div>
+  <p class="subtitle">Piattaforma corsi + membership ricorrente + AI tools</p>
+  <div class="g2">
+    <div>
+      <table>
+        <thead><tr><th>Prodotto</th><th>Prezzo</th></tr></thead>
+        <tbody>
+          <tr><td>Inner Circle Essential</td><td><span class="tag t-low">99€/anno</span></td></tr>
+          <tr><td>Inner Circle Pro</td><td><span class="tag t-mid">77,50€/mese</span></td></tr>
+          <tr><td>Stock Mastery (full online)</td><td><span class="tag t-high">3 rate × 865€ (2.595€)</span></td></tr>
+          <tr><td>Corsi singoli verticali</td><td><span class="tag t-mid">Variabile</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:14px">
+        <h3>Modello di business</h3>
+        <p style="font-size:.92rem">One-shot corsi + membership ricorrente (Inner Circle). Pro include 3 analisi stock/mese + AI tools.</p>
       </div>
-
-      <div class="projects-grid">
-
-        <article class="case-card case-card--featured">
-          <img class="case-card__img"
-               src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=900&q=80"
-               alt="Residential building under construction">
-          <div class="case-card__body">
-            <span class="case-card__tag">Residential · Milan, IT</span>
-            <h3 class="case-card__title">Multi-storey residential complex</h3>
-            <p class="case-card__meta">Lattice slabs + shaped rebar · 2024</p>
-          </div>
-        </article>
-
-        <article class="case-card">
-          <img class="case-card__img"
-               src="https://images.unsplash.com/photo-1587582423116-ec07293f0395?w=600&q=80"
-               alt="Industrial warehouse construction site">
-          <div class="case-card__body">
-            <span class="case-card__tag">Industrial · Timișoara, RO</span>
-            <h3 class="case-card__title">Logistics warehouse</h3>
-            <p class="case-card__meta">Double walls + EPS · 2023</p>
-          </div>
-        </article>
-
-        <article class="case-card">
-          <img class="case-card__img"
-               src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=600&q=80"
-               alt="Commercial building structure">
-          <div class="case-card__body">
-            <span class="case-card__tag">Commercial · Bari, IT</span>
-            <h3 class="case-card__title">Shopping centre</h3>
-            <p class="case-card__meta">Full structural supply · 2023</p>
-          </div>
-        </article>
-
+      <div class="card" style="margin-bottom:14px">
+        <h3>Lead Magnet</h3>
+        <p style="font-size:.92rem">App gratuita con corsi base, challenge introduttive, contenuti social</p>
+      </div>
+      <div class="card">
+        <div class="stat-sm" style="-webkit-text-fill-color:var(--blue);color:var(--blue);background:none">€99–2.595</div>
+        <div class="label">Range completo — da entry a premium</div>
       </div>
     </div>
-  </section>
-
-  <!-- TECHNICAL AREA -->
-  <section class="tech-section" id="technical">
-    <div class="container">
-      <div class="tech-layout">
-
-        <div>
-          <p class="eyebrow mb-md">Technical area</p>
-          <h2 class="mb-lg">Datasheets, certifications<br>and technical guides</h2>
-          <p class="mb-xl" style="color:var(--steel-600); max-width:440px; font-size:var(--fs-body-lg); line-height:1.6;">
-            Free access to product datasheets, CE certifications, installation guides and technical documentation.
-            Filter by product, application or market.
-          </p>
-          <a href="#" class="btn btn--light">Access technical area</a>
-        </div>
-
-        <div class="tech-panel">
-          <div class="tech-panel__header">
-            <div class="tech-panel__dot"></div>
-            <h3>Lattice slab — Technical data</h3>
-          </div>
-          <div class="tech-panel__row">
-            <span class="tech-panel__key">Material</span>
-            <span class="tech-panel__val tech-panel__val--hi">B450C</span>
-          </div>
-          <div class="tech-panel__row">
-            <span class="tech-panel__key">Standard</span>
-            <span class="tech-panel__val">UNI EN 10080</span>
-          </div>
-          <div class="tech-panel__row">
-            <span class="tech-panel__key">Yield strength</span>
-            <span class="tech-panel__val">&ge; 450 MPa</span>
-          </div>
-          <div class="tech-panel__row">
-            <span class="tech-panel__key">Tensile strength</span>
-            <span class="tech-panel__val">&ge; 540 MPa</span>
-          </div>
-          <div class="tech-panel__row">
-            <span class="tech-panel__key">Thickness range</span>
-            <span class="tech-panel__val">4 — 32 mm</span>
-          </div>
-          <div class="tech-panel__row">
-            <span class="tech-panel__key">Certification</span>
-            <span class="tech-panel__val">CE / NTC 2018</span>
-          </div>
-        </div>
-
+  </div>
+  <div class="sources"><div class="sources-label">Fonti</div><ul>
+    <li><a href="https://www.moneysurfers.com/inner-circle-essential" target="_blank" rel="noopener">Inner Circle Essential (99€/anno)</a></li>
+    <li><a href="https://www.moneysurfers.com/corsi" target="_blank" rel="noopener">Corsi Moneysurfers</a></li>
+    <li><a href="https://app.moneysurfers.com/innercircle/pricing" target="_blank" rel="noopener">Pricing Inner Circle Pro</a></li>
+  </ul></div>
+  <span class="slide-num">6 / 20</span>
+</div>
+<!-- S7: Affari Miei -->
+<div class="slide">
+  <div class="badge">Competitor 4/9</div>
+  <div class="competitor-header">
+    <img src="https://www.google.com/s2/favicons?domain=affarimiei.biz&sz=64" class="competitor-logo" alt="Affari Miei">
+    <div><h2 style="margin-bottom:0">Affari Miei (Davide Marciano)</h2></div>
+  </div>
+  <p class="subtitle">Blog top SEO + corsi one-shot + club con portafogli modello</p>
+  <div class="g2">
+    <div>
+      <table>
+        <thead><tr><th>Prodotto</th><th>Prezzo</th></tr></thead>
+        <tbody>
+          <tr><td>EASY PAC — Basic</td><td><span class="tag t-low">97€</span></td></tr>
+          <tr><td>Easy Investments Formula — Basic</td><td><span class="tag t-high">1.497€</span></td></tr>
+          <tr><td>Easy Investments Formula — Premium</td><td><span class="tag t-high">> 1.497€</span></td></tr>
+          <tr><td>Fast Investments Planner — Basic</td><td><span class="tag t-high">997€/anno</span></td></tr>
+          <tr><td>Fast Investments Planner — Full</td><td><span class="tag t-high">da 1.997€/anno</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:14px">
+        <h3>Modello di business</h3>
+        <p style="font-size:.92rem">One-shot (corsi) + abbonamento annuale (club FIP con portafogli modello). SEO-driven acquisition.</p>
+      </div>
+      <div class="card" style="margin-bottom:14px">
+        <h3>Lead Magnet</h3>
+        <p style="font-size:.92rem">Blog (86k visite/mese), YouTube, newsletter gratuita</p>
+      </div>
+      <div class="card">
+        <div class="stat-sm" style="-webkit-text-fill-color:var(--turquoise);color:var(--turquoise);background:none">86K</div>
+        <div class="label">Visite/mese al blog (SEMrush)</div>
       </div>
     </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-inner">
-        <div>
-          <p class="eyebrow eyebrow--blue mb-md">Start a project</p>
-          <h2 style="color:var(--pure-white);">Have a structure<br>to evaluate?</h2>
-          <p>Send drawings, quantities or technical documentation. Ferramati's team reviews every request and responds with a tailored structural solution.</p>
-        </div>
-        <div class="cta-actions">
-          <a href="en/contatti.html" class="btn btn--primary">Send technical documents</a>
-          <a href="en/contatti.html" class="btn btn--ghost">Talk to the technical team</a>
-        </div>
+  </div>
+  <div class="sources"><div class="sources-label">Fonti</div><ul>
+    <li><a href="https://www.affarimiei.biz/fast-investments-planner" target="_blank" rel="noopener">Fast Investments Planner</a></li>
+    <li><a href="https://academy.affarimiei.biz/collections" target="_blank" rel="noopener">Academy — Tutti i prodotti</a></li>
+    <li><a href="https://academy.affarimiei.biz/courses/fast-investments-planner-basic" target="_blank" rel="noopener">FIP Basic (997€/anno)</a></li>
+    <li><a href="https://www.affarimiei.biz/fast-investments-planner-vs-moneyfarm/47820" target="_blank" rel="noopener">FIP Full vs Moneyfarm</a></li>
+  </ul></div>
+  <span class="slide-num">7 / 20</span>
+</div>
+<!-- S8: Luca Lixi / Plannix -->
+<div class="slide">
+  <div class="badge">Competitor 5/9</div>
+  <div class="competitor-header">
+    <img src="https://www.google.com/s2/favicons?domain=plannix.co&sz=64" class="competitor-logo" alt="Plannix">
+    <div><h2 style="margin-bottom:0">Luca Lixi — Lixi Invest / Plannix</h2></div>
+  </div>
+  <p class="subtitle">Educazione indipendente + consulenza fee-only flat + community</p>
+  <div class="g2">
+    <div>
+      <table>
+        <thead><tr><th>Prodotto</th><th>Prezzo</th></tr></thead>
+        <tbody>
+          <tr><td>Plannix — Vision (check-up)</td><td><span class="tag t-mid">da 290€</span></td></tr>
+          <tr><td>Plannix — Smart</td><td><span class="tag t-high">990€ una tantum</span></td></tr>
+          <tr><td>Plannix — Premium</td><td><span class="tag t-high">1.490€ una tantum</span></td></tr>
+          <tr><td>Plannix — Private</td><td><span class="tag t-high">da 4.900€ + IVA</span></td></tr>
+          <tr><td>Lixi Invest — Corsi e club (Tradix)</td><td><span class="tag t-mid">Non pubblico (funnel)</span></td></tr>
+          <tr><td>AEGIS SCF — Consulenza</td><td><span class="tag t-mid">Fee-only, concordata</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:14px">
+        <h3>Modello di business</h3>
+        <p style="font-size:.92rem">Fee-only a parcella fissa (Plannix) + vendita corsi digitali e membership premium (Lixi Invest) + consulenza patrimoniale (AEGIS SCF).</p>
+      </div>
+      <div class="card" style="margin-bottom:14px">
+        <h3>Lead Magnet</h3>
+        <p style="font-size:.92rem">YouTube "LIXI Invest", blog Plannix, community Facebook/Telegram "WikiLix"</p>
+      </div>
+      <div class="card">
+        <div class="stat-sm" style="-webkit-text-fill-color:var(--violet);color:var(--violet);background:none">290–4.900€+</div>
+        <div class="label">Range parcella fissa fee-only</div>
       </div>
     </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="site-footer__grid">
-
-        <div class="site-footer__brand">
-          <img src="https://www.ferramati.ro/wp-content/uploads/2023/08/ferramati-logo-int_004.svg"
-               alt="Ferramati International"
-               style="filter: brightness(0) invert(1); height:30px;">
-          <p>Technical partner for civil and industrial construction. Shaped rebar, precast concrete and EPS systems from Italy and Romania.</p>
-          <div class="site-footer__social">
-            <a href="#" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </a>
-            <a href="#" aria-label="Facebook">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            </a>
-            <a href="#" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.88 0 1.441 1.441 0 012.88 0z"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <div>
-          <h4>Products</h4>
-          <ul>
-            <li><a href="#">Shaped rebar</a></li>
-            <li><a href="#">FERCASS</a></li>
-            <li><a href="#">Lattice slabs</a></li>
-            <li><a href="#">Double walls</a></li>
-            <li><a href="#">EPS elements</a></li>
-            <li><a href="#">STEP System</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4>Company</h4>
-          <ul>
-            <li><a href="en/about.html">About Ferramati</a></li>
-            <li><a href="#">Facilities</a></li>
-            <li><a href="#">Certifications</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="en/news/index.html">News &amp; Insights</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4>Locations</h4>
-          <ul>
-            <li><a href="#">Fasano (BR), Italy</a></li>
-            <li><a href="#">Verdello (BG), Italy</a></li>
-            <li><a href="#">Timișoara, Romania</a></li>
-            <li><a href="#">Oradea, Romania</a></li>
-          </ul>
-        </div>
-
-      </div>
-      <div class="site-footer__bottom">
-        <span>&copy; 2026 Ferramati International S.r.l. All rights reserved.</span>
-        <div class="site-footer__legal">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Cookie Policy</a>
-          <a href="#">Terms of Sale</a>
-        </div>
-        <div class="lang-switcher">
-          <a href="it/index.html">IT</a>
-          <span class="sep">/</span>
-          <a href="index.html" class="active">EN</a>
-          <span class="sep">/</span>
-          <a href="ro/index.html">RO</a>
-        </div>
+  </div>
+  <div class="sources"><div class="sources-label">Fonti</div><ul>
+    <li><a href="https://www.plannix.co" target="_blank" rel="noopener">Plannix — Sito ufficiale</a></li>
+    <li><a href="https://www.plannix.co/blog/costi-investimento-fondi" target="_blank" rel="noopener">Plannix — Costi e parcelle</a></li>
+    <li><a href="https://www.plannix.co/blog/consulenza-indipendente-opinioni" target="_blank" rel="noopener">Consulenza indipendente fee-only</a></li>
+  </ul></div>
+  <span class="slide-num">8 / 20</span>
+</div>
+<!-- S9: NowTrade -->
+<div class="slide">
+  <div class="badge">Competitor 6/9</div>
+  <div class="competitor-header">
+    <img src="https://www.google.com/s2/favicons?domain=nowtrade.it&sz=64" class="competitor-logo" alt="NowTrade">
+    <div><h2 style="margin-bottom:0">NowTrade</h2></div>
+  </div>
+  <p class="subtitle">Suite BOT + segnali trading sportivo e betting exchange</p>
+  <div class="g2">
+    <div>
+      <table>
+        <thead><tr><th>Prodotto</th><th>Prezzo</th></tr></thead>
+        <tbody>
+          <tr><td>Piano Investor</td><td><span class="tag t-low">29,99€/mese</span></td></tr>
+          <tr><td>Mentorship — mensile</td><td><span class="tag t-low">29,99€/mese</span></td></tr>
+          <tr><td>Mentorship — annuale</td><td><span class="tag t-mid">299,99€/anno</span></td></tr>
+        </tbody>
+      </table>
+      <div class="card" style="margin-top:16px">
+        <h3>Cosa include</h3>
+        <ul style="list-style:none;padding:0">
+          <li style="padding:5px 0;font-size:.9rem;color:var(--text2)">Suite BOT automatizzati</li>
+          <li style="padding:5px 0;font-size:.9rem;color:var(--text2)">Segnali operativi</li>
+          <li style="padding:5px 0;font-size:.9rem;color:var(--text2)">Corsi + live chat</li>
+          <li style="padding:5px 0;font-size:.9rem;color:var(--text2)">Rateizzazione Klarna</li>
+        </ul>
       </div>
     </div>
-  </footer>
+    <div>
+      <div class="card" style="margin-bottom:14px">
+        <h3>Modello di business</h3>
+        <p style="font-size:.92rem">Subscription mensile/annuale. Focus su trading sportivo e betting exchange — nicchia specifica.</p>
+      </div>
+      <div class="card" style="margin-bottom:14px">
+        <h3>Lead Magnet</h3>
+        <p style="font-size:.92rem">Contenuti su Telegram e social (non strutturati)</p>
+      </div>
+      <div class="card">
+        <div class="stat-sm" style="-webkit-text-fill-color:var(--turquoise);color:var(--turquoise);background:none">€29,99</div>
+        <div class="label">Entry point piu basso tra i competitor</div>
+      </div>
+    </div>
+  </div>
+  <div class="sources"><div class="sources-label">Fonti</div><ul>
+    <li><a href="https://www.nowtrade.it/abbonamenti-nowtrade-1" target="_blank" rel="noopener">NowTrade — Abbonamenti</a></li>
+    <li><a href="https://www.nowtrade.it/mentorship3" target="_blank" rel="noopener">Mentorship — Pricing</a></li>
+    <li><a href="https://it.trustpilot.com/review/nowtrade.it" target="_blank" rel="noopener">Trustpilot — Recensioni</a></li>
+  </ul></div>
+  <span class="slide-num">9 / 20</span>
+</div>
+<!-- S10: Trading Millimetrico -->
+<div class="slide">
+  <div class="badge">Competitor 7/9</div>
+  <div class="competitor-header">
+    <img src="https://www.google.com/s2/favicons?domain=tradingmillimetrico.com&sz=64" class="competitor-logo" alt="Trading Millimetrico">
+    <div><h2 style="margin-bottom:0">Trading Millimetrico (Alfa Advisor)</h2></div>
+  </div>
+  <p class="subtitle">Expert Advisor algoritmico — licenza perpetua + abbonamenti</p>
+  <div class="g2">
+    <div>
+      <table>
+        <thead><tr><th>Prodotto</th><th>Prezzo</th></tr></thead>
+        <tbody>
+          <tr><td>Alfa Advisor — Licenza Perpetua (Early Access)</td><td><span class="tag t-high">1.497€</span></td></tr>
+          <tr><td>Piani abbonamento (mensile/trim/sem/annuale)</td><td><span class="tag t-mid">Pricing dinamico</span></td></tr>
+          <tr><td>Corsi MQL5 Mastery</td><td><span class="tag t-mid">Non pubblico</span></td></tr>
+        </tbody>
+      </table>
+      <div class="card" style="margin-top:16px">
+        <h3>Caratteristiche</h3>
+        <ul style="list-style:none;padding:0">
+          <li style="padding:5px 0;font-size:.9rem;color:var(--text2)">Trading algoritmico automatizzato</li>
+          <li style="padding:5px 0;font-size:.9rem;color:var(--text2)">Aggiornamenti a vita (licenza perpetua)</li>
+          <li style="padding:5px 0;font-size:.9rem;color:var(--text2)">Early Access fino al 31/12/2026</li>
+          <li style="padding:5px 0;font-size:.9rem;color:var(--text2)">Formazione su Expert Advisor (MQL5)</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:14px">
+        <h3>Modello di business</h3>
+        <p style="font-size:.92rem">Licenza one-shot + abbonamenti ricorrenti per l'EA algoritmico. Prodotto software, non educativo puro.</p>
+      </div>
+      <div class="card" style="margin-bottom:14px">
+        <h3>Lead Magnet</h3>
+        <p style="font-size:.92rem">Contenuti tecnici, documentazione sul sito</p>
+      </div>
+      <div class="card">
+        <div class="stat-sm" style="-webkit-text-fill-color:#FF5F8A;color:#FF5F8A;background:none">1.497€</div>
+        <div class="label">Licenza perpetua — accesso illimitato</div>
+      </div>
+    </div>
+  </div>
+  <div class="sources"><div class="sources-label">Fonti</div><ul>
+    <li><a href="https://www.tradingmillimetrico.com/it" target="_blank" rel="noopener">Alfa Advisor — Sito ufficiale</a></li>
+    <li><a href="https://www.tradingmillimetrico.com/it/software" target="_blank" rel="noopener">Software — Pricing licenza</a></li>
+    <li><a href="https://forbes.it/2022/09/01/trading-online-lanciato-mercato-bot-intelligente-automatico/" target="_blank" rel="noopener">Forbes — Trading automatizzato</a></li>
+  </ul></div>
+  <span class="slide-num">10 / 20</span>
+</div>
+<!-- S11: IoInvesto SCF -->
+<div class="slide">
+  <div class="badge">Competitor 8/9</div>
+  <div class="competitor-header">
+    <img src="https://www.google.com/s2/favicons?domain=ioinvesto.net&sz=64" class="competitor-logo" alt="IoInvesto SCF">
+    <div><h2 style="margin-bottom:0">IoInvesto SCF</h2></div>
+  </div>
+  <p class="subtitle">La piu grande SCF italiana — consulenza fee-only su AUM</p>
+  <div class="g2">
+    <div>
+      <table>
+        <thead><tr><th>Fascia patrimonio</th><th>Fee annua</th></tr></thead>
+        <tbody>
+          <tr><td>Capitali piccoli</td><td><span class="tag t-mid">~1% annuo</span></td></tr>
+          <tr><td>Capitali medi</td><td><span class="tag t-mid">0,7% annuo</span></td></tr>
+          <tr><td>Capitali grandi</td><td><span class="tag t-low">~0,50% annuo</span></td></tr>
+          <tr><td>Minimo</td><td><span class="tag t-low">500€ + IVA/anno</span></td></tr>
+        </tbody>
+      </table>
+      <div class="card" style="margin-top:16px">
+        <h3>Punti di forza</h3>
+        <ul style="list-style:none;padding:0">
+          <li style="padding:5px 0;font-size:.9rem;color:var(--text2)">Fee-only: nessuna retrocessione</li>
+          <li style="padding:5px 0;font-size:.9rem;color:var(--text2)">Nessun conflitto di interesse</li>
+          <li style="padding:5px 0;font-size:.9rem;color:var(--text2)">Analisi gratuita del portafoglio</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:14px">
+        <h3>Modello di business</h3>
+        <p style="font-size:.92rem">Fee su AUM (percentuale decrescente), completamente fee-only senza retrocessioni. Modello tradizionale SCF.</p>
+      </div>
+      <div class="card" style="margin-bottom:14px">
+        <h3>Lead Magnet</h3>
+        <p style="font-size:.92rem">Analisi gratuita del portafoglio come primo contatto</p>
+      </div>
+      <div class="card">
+        <div class="stat-sm" style="-webkit-text-fill-color:var(--violet);color:var(--violet);background:none">€500M+</div>
+        <div class="label">Asset Under Management (AUM)</div>
+      </div>
+    </div>
+  </div>
+  <div class="sources"><div class="sources-label">Fonti</div><ul>
+    <li><a href="https://www.ioinvesto.net/costi/" target="_blank" rel="noopener">IoInvesto — Costi e parcella</a></li>
+    <li><a href="https://supporto.ioinvesto.net/costi?hsLang=it" target="_blank" rel="noopener">Knowledge base — Struttura costi</a></li>
+    <li><a href="https://www.ioinvesto.net/blog/consulenza-finanziaria/costo-consulenza-finanziaria/" target="_blank" rel="noopener">Costo consulenza finanziaria</a></li>
+    <li><a href="https://ancnazionale.it/wp-content/uploads/2022/10/Company-Profile-IoInvesto-SCF.pdf" target="_blank" rel="noopener">Company Profile (PDF — AUM)</a></li>
+  </ul></div>
+  <span class="slide-num">11 / 20</span>
+</div>
+<!-- S12: Paolo Coletti -->
+<div class="slide">
+  <div class="badge">Competitor 9/9</div>
+  <div class="competitor-header">
+    <img src="https://www.google.com/s2/favicons?domain=educatiefinanziati.it&sz=64" class="competitor-logo" alt="Paolo Coletti">
+    <div><h2 style="margin-bottom:0">Paolo Coletti — Educati e Finanziati</h2></div>
+  </div>
+  <p class="subtitle">Professore universitario — contenuto gratuito come modello core</p>
+  <div class="g2">
+    <div>
+      <table>
+        <thead><tr><th>Prodotto</th><th>Prezzo</th></tr></thead>
+        <tbody>
+          <tr><td>Corso completo YouTube</td><td><span class="tag t-free">Gratuito</span></td></tr>
+          <tr><td>Sito educatiefinanziati.it</td><td><span class="tag t-free">Corsi gratuiti + a pagamento</span></td></tr>
+        </tbody>
+      </table>
+      <div class="card" style="margin-top:16px">
+        <h3>Copertura tematica</h3>
+        <ul style="list-style:none;padding:0">
+          <li style="padding:5px 0;font-size:.9rem;color:var(--text2)">ETF e fondi indicizzati</li>
+          <li style="padding:5px 0;font-size:.9rem;color:var(--text2)">Obbligazioni</li>
+          <li style="padding:5px 0;font-size:.9rem;color:var(--text2)">Risparmio e pianificazione</li>
+          <li style="padding:5px 0;font-size:.9rem;color:var(--text2)">Analisi critica prodotti finanziari</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:14px">
+        <h3>Modello di business</h3>
+        <p style="font-size:.92rem">Contenuto gratuito come core, eventuale monetizzazione secondaria. Non compete su revenue ma su attenzione.</p>
+      </div>
+      <div class="card" style="margin-bottom:14px">
+        <h3>Lead Magnet</h3>
+        <p style="font-size:.92rem">Il contenuto stesso e il lead magnet: corsi YouTube strutturati completamente free</p>
+      </div>
+      <div class="card" style="border-color:var(--cyan)">
+        <h3 style="color:var(--cyan)">Nota strategica</h3>
+        <p style="font-size:.88rem">Competitor di <span class="hi">attenzione</span>, non di revenue. Dimostra che l'educazione finanziaria gratuita crea audience enorme — il clone AI aggiunge personalizzazione e monetizzazione.</p>
+      </div>
+    </div>
+  </div>
+  <div class="sources"><div class="sources-label">Fonti</div><ul>
+    <li><a href="https://www.educatiefinanziati.it" target="_blank" rel="noopener">Educati e Finanziati — Sito</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLfuzpc-H8qcdetz_Zwc5ILnbiG6eek_T8" target="_blank" rel="noopener">YouTube — Corso base gratuito</a></li>
+    <li><a href="https://www.youtube.com/paolocoletti" target="_blank" rel="noopener">Canale YouTube Paolo Coletti</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLfuzpc-H8qcej-Pm9vMA9z6mCC2GriEjY" target="_blank" rel="noopener">YouTube — Corso avanzato</a></li>
+  </ul></div>
+  <span class="slide-num">12 / 20</span>
+</div>
+<!-- S13: Quadrante 1 -->
+<div class="slide">
+  <h2>Quadrante: Prezzo vs Interattivita</h2>
+  <p class="subtitle">Dove si posiziona The Bull + Clonyo rispetto ai competitor</p>
+  <div class="chart-box"><canvas id="q1"></canvas></div>
+  <span class="slide-num">13 / 20</span>
+</div>
 
-  <script src="assets/js/hero-animations.js"></script>
-  <script src="assets/js/mobile-menu.js"></script>
+<!-- S14: Quadrante 2 -->
+<div class="slide">
+  <h2>Quadrante: Accessibilita vs Profondita</h2>
+  <p class="subtitle">L'opportunita: educazione profonda a prezzo accessibile</p>
+  <div class="chart-box"><canvas id="q2"></canvas></div>
+  <span class="slide-num">14 / 20</span>
+</div>
 
+<!-- S15: Vuoto di mercato -->
+<div class="slide">
+  <h2>Il vuoto di mercato</h2>
+  <p class="subtitle">Nessun competitor italiano occupa questo spazio</p>
+  <div class="g2">
+    <div class="card">
+      <h3 style="color:var(--text2)">Cosa esiste oggi</h3>
+      <ul style="list-style:none;padding:0">
+        <li style="padding:8px 0;border-bottom:1px solid var(--border);color:var(--text2)">Contenuti gratuiti (passivi, non personalizzati)</li>
+        <li style="padding:8px 0;border-bottom:1px solid var(--border);color:var(--text2)">Corsi one-shot (€97–3.000, finiti una volta completati)</li>
+        <li style="padding:8px 0;border-bottom:1px solid var(--border);color:var(--text2)">Segnali trading (operativi, non educativi)</li>
+        <li style="padding:8px 0;color:var(--text2)">Consulenza 1:1 (€500+/anno, non scalabile)</li>
+      </ul>
+    </div>
+    <div class="card-hi">
+      <h3 style="color:var(--cyan)">Cosa manca</h3>
+      <p style="font-size:1.05rem;color:var(--text);line-height:1.7">Un <span class="hi">tutor educativo personale</span>, disponibile 24/7, con la voce e il metodo di un creator di fiducia, a un prezzo accessibile (<span class="hi">€10–30/mese</span>).</p>
+      <p style="margin-top:14px;font-size:.95rem;color:var(--text2)">Interattivo come la consulenza.<br>Accessibile come il podcast.<br>Profondo come un corso.</p>
+    </div>
+  </div>
+  <span class="slide-num">15 / 20</span>
+</div>
+<!-- S16: Audience -->
+<div class="slide">
+  <h2>L'audience di The Bull</h2>
+  <p class="subtitle">Dati gen–giu 2026 — Podcast finanza personale n.1 in Italia</p>
+  <div class="g3">
+    <div class="card" style="text-align:center"><div class="stat">5.6M</div><div class="label">Stream totali (6 mesi)</div></div>
+    <div class="card" style="text-align:center"><div class="stat">425K</div><div class="label">Utenti unici Spotify</div></div>
+    <div class="card" style="text-align:center"><div class="stat">172K</div><div class="label">Follower Spotify</div></div>
+  </div>
+  <div class="g3" style="margin-top:16px">
+    <div class="card" style="text-align:center"><div class="stat-sm">354K</div><div class="label">Utenti unici YouTube</div></div>
+    <div class="card" style="text-align:center"><div class="stat-sm">15K</div><div class="label">Iscritti newsletter</div></div>
+    <div class="card" style="text-align:center"><div class="stat-sm">77.5K</div><div class="label">Follower Instagram</div></div>
+  </div>
+  <p style="margin-top:20px;text-align:center;font-size:.9rem;color:var(--dim)">Bacino unico stimato: <span class="hi">500.000–600.000</span> ascoltatori semestrali</p>
+  <span class="slide-num">16 / 20</span>
+</div>
+<!-- S17: Benchmark -->
+<div class="slide">
+  <h2>Benchmark pricing — Competitor diretti</h2>
+  <p class="subtitle">Prezzi verificati, giugno 2026</p>
+  <table>
+    <thead><tr><th>Player</th><th>Prodotto</th><th>Prezzo</th><th>Modello</th></tr></thead>
+    <tbody>
+      <tr><td style="color:var(--text);font-weight:600">Alfio Bardolla</td><td>Wake Up Call + corsi</td><td><span class="tag t-high">318–997€</span></td><td>One-shot</td></tr>
+      <tr><td style="color:var(--text);font-weight:600">Marco Casario</td><td>10Min Trader Course</td><td><span class="tag t-high">3.000€</span></td><td>One-shot</td></tr>
+      <tr><td style="color:var(--text);font-weight:600">Moneysurfers</td><td>Inner Circle + Stock M.</td><td><span class="tag t-mid">99€/a – 2.595€</span></td><td>Membership+corsi</td></tr>
+      <tr><td style="color:var(--text);font-weight:600">Affari Miei</td><td>Easy Inv. + FIP Club</td><td><span class="tag t-high">1.497 – 1.997€/a</span></td><td>One-shot+sub</td></tr>
+      <tr><td style="color:var(--text);font-weight:600">NowTrade</td><td>BOT + Mentorship</td><td><span class="tag t-low">29,99€/mese</span></td><td>Subscription</td></tr>
+      <tr><td style="color:var(--text);font-weight:600">Trading Library</td><td>Segnali Intraday</td><td><span class="tag t-mid">67€/m – 659€/a</span></td><td>Subscription</td></tr>
+      <tr><td style="color:var(--text);font-weight:600">Luca Lixi / Plannix</td><td>Consulenza flat + Corsi</td><td><span class="tag t-high">290 – 4.900€+</span></td><td>One-shot (parcella)</td></tr>
+      <tr style="background:rgba(123,77,255,0.08)"><td style="color:var(--cyan);font-weight:700">The Bull + Clonyo</td><td style="color:var(--cyan)">Tutor AI 24/7 WhatsApp</td><td><span class="tag t-free">9,99–29,99€/m</span></td><td style="color:var(--cyan)">Subscription</td></tr>
+    </tbody>
+  </table>
+  <span class="slide-num">17 / 20</span>
+</div>
+<!-- S18: Strategia pricing -->
+<div class="slide">
+  <h2>Strategia di pricing proposta</h2>
+  <p class="subtitle">Tre tier — la voce di Riccardo su tutti i livelli</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;align-items:stretch">
+    <!-- Freemium -->
+    <div style="background:linear-gradient(180deg, rgba(32,20,74,0.6) 0%, rgba(10,7,24,0.75) 100%);border:1px solid var(--border);border-radius:16px;padding:28px 24px;display:flex;flex-direction:column;position:relative;backdrop-filter:blur(12px)">
+      <div style="width:40px;height:40px;border-radius:10px;background:rgba(31,224,200,0.12);border:1px solid rgba(31,224,200,0.3);display:flex;align-items:center;justify-content:center;margin-bottom:16px">
+        <svg width="20" height="20" fill="none" stroke="#1FE0C8" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      </div>
+      <h3 style="color:var(--turquoise);font-size:1.1rem;margin-bottom:4px">Freemium</h3>
+      <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:2.4rem;font-weight:800;color:var(--turquoise);margin-bottom:4px">€0</div>
+      <p style="font-size:.78rem;color:var(--dim);margin-bottom:18px">Per sempre</p>
+      <ul style="list-style:none;padding:0;flex:1">
+        <li style="padding:7px 0;font-size:.9rem;color:var(--text2);display:flex;align-items:flex-start;gap:8px"><span style="color:var(--turquoise);flex-shrink:0">&#10003;</span> 2 interazioni / giorno garantite</li>
+        <li style="padding:7px 0;font-size:.9rem;color:var(--text2);display:flex;align-items:flex-start;gap:8px"><span style="color:var(--turquoise);flex-shrink:0">&#10003;</span> Testo + audio voce Riccardo</li>
+        <li style="padding:7px 0;font-size:.9rem;color:var(--text2);display:flex;align-items:flex-start;gap:8px"><span style="color:var(--turquoise);flex-shrink:0">&#10003;</span> Rimandi agli episodi</li>
+      </ul>
+      <p style="margin-top:14px;font-size:.82rem;color:var(--dim);line-height:1.5;border-top:1px solid var(--border);padding-top:12px">Dopo il limite giornaliero, l'AI suggerisce il passaggio al piano superiore per continuare a ricevere consigli personalizzati.</p>
+      <div style="margin-top:14px;padding:10px 16px;background:rgba(31,224,200,0.08);border:1px solid rgba(31,224,200,0.2);border-radius:8px;text-align:center">
+        <span style="font-size:.78rem;color:var(--turquoise);font-weight:600">Trial & acquisizione</span>
+      </div>
+    </div>
+    <!-- Unlimited -->
+    <div style="background:linear-gradient(180deg, rgba(60,36,130,0.75) 0%, rgba(14,9,32,0.85) 100%);border:2px solid var(--purple);border-radius:16px;padding:28px 24px;display:flex;flex-direction:column;position:relative;backdrop-filter:blur(12px);box-shadow:0 0 40px rgba(123,77,255,0.2), 0 0 80px rgba(66,232,242,0.08)">
+      <div style="width:40px;height:40px;border-radius:10px;background:rgba(123,77,255,0.15);border:1px solid rgba(123,77,255,0.4);display:flex;align-items:center;justify-content:center;margin-bottom:16px">
+        <svg width="20" height="20" fill="none" stroke="#7B4DFF" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
+      <h3 style="color:var(--cyan);font-size:1.1rem;margin-bottom:4px">Unlimited</h3>
+      <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:2.4rem;font-weight:800;background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:4px">€9,99–14,99</div>
+      <p style="font-size:.78rem;color:var(--dim);margin-bottom:18px">/mese · €99–149/anno</p>
+      <ul style="list-style:none;padding:0;flex:1">
+        <li style="padding:7px 0;font-size:.9rem;color:var(--text);display:flex;align-items:flex-start;gap:8px;font-weight:500"><span style="color:var(--cyan);flex-shrink:0">&#10003;</span> Domande illimitate</li>
+        <li style="padding:7px 0;font-size:.9rem;color:var(--text);display:flex;align-items:flex-start;gap:8px;font-weight:500"><span style="color:var(--cyan);flex-shrink:0">&#10003;</span> Testo + audio voce Riccardo</li>
+        <li style="padding:7px 0;font-size:.9rem;color:var(--text);display:flex;align-items:flex-start;gap:8px;font-weight:500"><span style="color:var(--cyan);flex-shrink:0">&#10003;</span> Knowledge base completa</li>
+        <li style="padding:7px 0;font-size:.9rem;color:var(--text);display:flex;align-items:flex-start;gap:8px;font-weight:500"><span style="color:var(--cyan);flex-shrink:0">&#10003;</span> Accesso 24/7 su WhatsApp</li>
+      </ul>
+      <div style="margin-top:14px;padding:10px 16px;background:linear-gradient(90deg,rgba(123,77,255,0.2),rgba(66,232,242,0.15));border:1px solid rgba(123,77,255,0.4);border-radius:8px;text-align:center">
+        <span style="font-size:.78rem;color:var(--cyan);font-weight:600">Conversione di massa</span>
+      </div>
+    </div>
+    <!-- Premium -->
+    <div style="background:linear-gradient(180deg, rgba(32,20,74,0.6) 0%, rgba(10,7,24,0.75) 100%);border:1px solid rgba(155,108,255,0.35);border-radius:16px;padding:28px 24px;display:flex;flex-direction:column;position:relative;backdrop-filter:blur(12px)">
+      <div style="width:40px;height:40px;border-radius:10px;background:rgba(155,108,255,0.12);border:1px solid rgba(155,108,255,0.3);display:flex;align-items:center;justify-content:center;margin-bottom:16px">
+        <svg width="20" height="20" fill="none" stroke="#9B6CFF" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <h3 style="color:var(--violet);font-size:1.1rem;margin-bottom:4px">Premium</h3>
+      <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:2.4rem;font-weight:800;color:var(--violet);margin-bottom:4px">€19,99–29,99</div>
+      <p style="font-size:.78rem;color:var(--dim);margin-bottom:18px">/mese · €199–299/anno</p>
+      <ul style="list-style:none;padding:0;flex:1">
+        <li style="padding:7px 0;font-size:.9rem;color:var(--text2);display:flex;align-items:flex-start;gap:8px"><span style="color:var(--violet);flex-shrink:0">&#10003;</span> Tutto Unlimited +</li>
+        <li style="padding:7px 0;font-size:.9rem;color:var(--text2);display:flex;align-items:flex-start;gap:8px"><span style="color:var(--violet);flex-shrink:0">&#10003;</span> Report riservati</li>
+        <li style="padding:7px 0;font-size:.9rem;color:var(--text2);display:flex;align-items:flex-start;gap:8px"><span style="color:var(--violet);flex-shrink:0">&#10003;</span> Sessioni live tematiche con Riccardo</li>
+      </ul>
+      <div style="margin-top:14px;padding:10px 16px;background:rgba(155,108,255,0.08);border:1px solid rgba(155,108,255,0.25);border-radius:8px;text-align:center">
+        <span style="font-size:.78rem;color:var(--violet);font-weight:600">ARPU & power user</span>
+      </div>
+    </div>
+  </div>
+  <!-- One-shot box -->
+  <div style="margin-top:24px;padding:20px 28px;background:linear-gradient(135deg, rgba(60,36,130,0.5) 0%, rgba(66,232,242,0.08) 100%);border-radius:14px;border:1px solid var(--purple);box-shadow:0 0 20px rgba(123,77,255,0.12)">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+      <svg width="22" height="22" fill="none" stroke="var(--cyan)" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="3"/><path d="M8 7h8M8 11h5"/><circle cx="16" cy="15" r="3"/><path d="M18 17l2 2"/></svg>
+      <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:700;color:var(--text)">Prodotti one-shot</span>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
+      <div style="padding:12px 16px;background:rgba(31,224,200,0.06);border:1px solid rgba(31,224,200,0.2);border-radius:10px">
+        <div style="font-size:.95rem;font-weight:600;color:var(--text);margin-bottom:4px">Report "Il Tuo Piano"</div>
+        <div style="font-size:.82rem;color:var(--dim)">Generato dall'AI su input utente</div>
+        <div style="margin-top:8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:1.1rem;font-weight:700;color:var(--turquoise)">€29–49</div>
+      </div>
+      <div style="padding:12px 16px;background:rgba(123,77,255,0.06);border:1px solid rgba(123,77,255,0.2);border-radius:10px">
+        <div style="font-size:.95rem;font-weight:600;color:var(--text);margin-bottom:4px">Onboarding Investitore</div>
+        <div style="font-size:.82rem;color:var(--dim)">10 sessioni guidate tematiche</div>
+        <div style="margin-top:8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:1.1rem;font-weight:700;color:var(--violet)">€49–99</div>
+      </div>
+      <div style="padding:12px 16px;background:rgba(66,232,242,0.06);border:1px solid rgba(66,232,242,0.2);border-radius:10px">
+        <div style="font-size:.95rem;font-weight:600;color:var(--text);margin-bottom:4px">Lifetime Early Adopter</div>
+        <div style="font-size:.82rem;color:var(--dim)">Scarcity: max 500 posti</div>
+        <div style="margin-top:8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:1.1rem;font-weight:700;color:var(--cyan)">€299–499</div>
+      </div>
+    </div>
+  </div>
+  <span class="slide-num">18 / 20</span>
+</div>
+<!-- S19: Conversione -->
+<div class="slide">
+  <h2>Potenziale di conversione</h2>
+  <p class="subtitle">Come leggerlo: bacino di partenza × tasso di conversione × prezzo medio = MRR</p>
+  <!-- Assunzioni -->
+  <div class="card" style="margin-bottom:18px;padding:16px 22px">
+    <h3 style="color:var(--cyan);margin-bottom:8px">Ipotesi di calcolo</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
+      <div>
+        <div class="label">Bacino raggiungibile</div>
+        <p style="font-size:1rem;color:var(--text);font-weight:600;margin-top:4px">500.000 ascoltatori unici/semestre</p>
+        <p style="font-size:.78rem;color:var(--dim);margin-top:2px">Spotify 425K + YouTube 354K, deduplicate</p>
+      </div>
+      <div>
+        <div class="label">Prezzo medio ipotizzato</div>
+        <p style="font-size:1rem;color:var(--text);font-weight:600;margin-top:4px">€14,99/mese (piano Unlimited)</p>
+        <p style="font-size:.78rem;color:var(--dim);margin-top:2px">Tier piu probabile per conversione di massa</p>
+      </div>
+      <div>
+        <div class="label">Primo canale di lancio</div>
+        <p style="font-size:1rem;color:var(--text);font-weight:600;margin-top:4px">Newsletter (15.000 iscritti)</p>
+        <p style="font-size:.78rem;color:var(--dim);margin-top:2px">Conversion rate email atteso: 5–10%</p>
+      </div>
+    </div>
+  </div>
+  <!-- Scenari -->
+  <div class="g2">
+    <div class="chart-box" style="min-height:300px"><canvas id="convChart"></canvas></div>
+    <div>
+      <div class="card" style="margin-bottom:14px">
+        <h3 style="color:var(--dim)">Conservativo</h3>
+        <p style="font-size:.78rem;color:var(--dim);margin-bottom:6px">0,5% di 500K = 2.500 utenti paganti</p>
+        <div class="stat" style="font-size:1.8rem">€37.475</div>
+        <p style="font-size:.82rem;margin-top:4px;color:var(--text2)">MRR · 2.500 × €14,99</p>
+      </div>
+      <div class="card-hi" style="margin-bottom:14px">
+        <h3 style="color:var(--cyan)">Medio</h3>
+        <p style="font-size:.78rem;color:var(--dim);margin-bottom:6px">1% di 500K = 5.000 utenti paganti</p>
+        <div class="stat" style="font-size:1.8rem">€74.950</div>
+        <p style="font-size:.82rem;margin-top:4px;color:var(--text2)">MRR · 5.000 × €14,99</p>
+      </div>
+      <div class="card">
+        <h3 style="color:var(--turquoise)">Ottimistico</h3>
+        <p style="font-size:.78rem;color:var(--dim);margin-bottom:6px">2% di 500K = 10.000 utenti paganti</p>
+        <div class="stat" style="-webkit-text-fill-color:var(--turquoise);color:var(--turquoise);background:none;font-size:1.8rem">€149.900</div>
+        <p style="font-size:.82rem;margin-top:4px;color:var(--text2)">MRR · 10.000 × €14,99</p>
+      </div>
+    </div>
+  </div>
+  <p style="margin-top:14px;font-size:.82rem;color:var(--dim);text-align:center"><strong style="color:var(--text2)">Lancio iniziale via newsletter:</strong> 15.000 iscritti × 5–10% conv. = 750–1.500 utenti paganti dal giorno 1</p>
+  <span class="slide-num">19 / 20</span>
+</div>
+<!-- S20: Next -->
+<div class="slide">
+  <h2>Prossimi passi</h2>
+  <p class="subtitle">Roadmap verso il lancio</p>
+  <div style="max-width:680px;width:100%">
+    <div style="display:flex;gap:14px;align-items:flex-start;margin-bottom:22px">
+      <div style="min-width:38px;width:38px;height:38px;background:var(--gradient-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--bg);flex-shrink:0">1</div>
+      <div><h3 style="color:var(--text);margin-bottom:4px">Luglio — Teaser</h3><p style="font-size:.92rem">Primo annuncio clone AI in Stories IG e podcast. Curiosita.</p></div>
+    </div>
+    <div style="display:flex;gap:14px;align-items:flex-start;margin-bottom:22px">
+      <div style="min-width:38px;width:38px;height:38px;background:var(--gradient-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--bg);flex-shrink:0">2</div>
+      <div><h3 style="color:var(--text);margin-bottom:4px">Agosto — Validazione WTP</h3><p style="font-size:.92rem">Sondaggio newsletter: "Pagheresti €X/mese per un tutor AI con la voce di Riccardo?"</p></div>
+    </div>
+    <div style="display:flex;gap:14px;align-items:flex-start;margin-bottom:22px">
+      <div style="min-width:38px;width:38px;height:38px;background:var(--gradient-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--bg);flex-shrink:0">3</div>
+      <div><h3 style="color:var(--text);margin-bottom:4px">Settembre — Waitlist</h3><p style="font-size:.92rem">Apertura waitlist, pricing scontato primi 500. Lifetime deal super-fan.</p></div>
+    </div>
+    <div style="display:flex;gap:14px;align-items:flex-start">
+      <div style="min-width:38px;width:38px;height:38px;background:var(--turquoise);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--bg);flex-shrink:0">4</div>
+      <div><h3 style="color:var(--text);margin-bottom:4px">Q4 2026 — Lancio</h3><p style="font-size:.92rem">Go-live con pricing calibrato su dati WTP. Annuncio podcast + newsletter + IG.</p></div>
+    </div>
+  </div>
+  <button id="btnRestart" onclick="event.stopPropagation();go(0);" style="margin-top:32px;display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:10px;border:1px solid rgba(255,255,255,0.22);background:linear-gradient(90deg,#7B4DFF 0%,#42E8F2 100%);color:#fff;font-weight:700;font-size:14px;font-family:inherit;cursor:pointer;box-shadow:0 0 24px rgba(123,77,255,0.48),0 0 36px rgba(66,232,242,0.22);transition:transform 180ms ease,box-shadow 180ms ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">&#8592; Torna all'inizio</button>
+  <span class="slide-num">20 / 20</span>
+</div>
+
+<div class="nav-hint">Frecce o click per navigare</div>
+<div class="nav-arrows"><button id="btnP" aria-label="Precedente">&#8592;</button><button id="btnN" aria-label="Successiva">&#8594;</button></div>
+<script>
+Chart.register(ChartDataLabels);
+var slides=document.querySelectorAll('.slide'),cur=0,tot=slides.length;
+function go(n){if(n<0||n>=tot)return;slides[cur].classList.remove('active');cur=n;slides[cur].classList.add('active');document.getElementById('prog').style.width=((cur+1)/tot*100)+'%';if(cur===12)initQ1();if(cur===13)initQ2();if(cur===18)initConv();}
+document.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();go(cur+1);}if(e.key==='ArrowLeft'){e.preventDefault();go(cur-1);}});
+document.addEventListener('click',function(e){if(e.target.closest('canvas')||e.target.closest('.nav-arrows')||e.target.closest('#btnRestart'))return;if(e.clientX>window.innerWidth/2)go(cur+1);else go(cur-1);});
+var tx=0,ty=0;
+document.addEventListener('touchstart',function(e){tx=e.changedTouches[0].screenX;ty=e.changedTouches[0].screenY;},{passive:true});
+document.addEventListener('touchend',function(e){var dx=tx-e.changedTouches[0].screenX,dy=Math.abs(ty-e.changedTouches[0].screenY);if(Math.abs(dx)>60&&Math.abs(dx)>dy){if(dx>0)go(cur+1);else go(cur-1);}},{passive:true});
+document.getElementById('btnP').addEventListener('click',function(e){e.stopPropagation();go(cur-1);});
+document.getElementById('btnN').addEventListener('click',function(e){e.stopPropagation();go(cur+1);});
+document.getElementById('prog').style.width=(1/tot*100)+'%';
+</script>
+<script>
+var q1Done=false;function initQ1(){if(q1Done)return;q1Done=true;
+new Chart(document.getElementById('q1'),{type:'bubble',data:{datasets:[
+{label:'Gratuiti/Passivi',data:[{x:1.5,y:0.5,r:12,name:'The Bull (oggi)',detail:'Podcast gratuito, 5.6M stream/sem'},{x:1,y:0.8,r:9,name:'Paolo Coletti',detail:'YouTube gratuito, corso base'},{x:0.8,y:0.3,r:8,name:'Mr RIP',detail:'Blog+Twitch, FIRE'}],backgroundColor:'rgba(143,135,179,.6)',borderColor:'#8F87B3'},
+{label:'Corsi/One-shot',data:[{x:3,y:8.5,r:11,name:'Marco Casario',detail:'3.000€, 200+ ore, Trading Room'},{x:3.5,y:6.5,r:10,name:'Moneysurfers',detail:'99€/a – 2.595€, corsi+membership'},{x:2,y:9,r:13,name:'Alfio Bardolla',detail:'318–5.000€+, eventi+coaching'},{x:3,y:7.5,r:11,name:'Affari Miei',detail:'97€ – 1.997€/a, corsi+club'}],backgroundColor:'rgba(93,140,255,.65)',borderColor:'#5D8CFF'},
+{label:'Segnali/Trading',data:[{x:4.5,y:3.5,r:9,name:'NowTrade',detail:'29,99€/m, BOT+betting'},{x:5,y:5,r:9,name:'Trading Library',detail:'67€/m, segnali intraday'},{x:4,y:8,r:10,name:'Trading Millimetrico',detail:'1.497€ licenza EA'}],backgroundColor:'rgba(255,95,138,.6)',borderColor:'#FF5F8A'},
+{label:'Consulenza',data:[{x:8,y:7,r:11,name:'IoInvesto SCF',detail:'0,7–1% AUM, fee-only, 500M+'},{x:6.5,y:5.5,r:10,name:'Moneyfarm',detail:'0,35–0,75% AUM, robo-advisor'},{x:7,y:7.5,r:11,name:'Plannix (Lixi)',detail:'290–4.900€+, consulenza flat fee-only'}],backgroundColor:'rgba(155,108,255,.6)',borderColor:'#9B6CFF'},
+{label:'The Bull + Clonyo',data:[{x:9,y:2.5,r:18,name:'CLONYO',detail:'€9,99–29,99/m, tutor AI 24/7 voce Riccardo'}],backgroundColor:'rgba(66,232,242,.8)',borderColor:'#42E8F2',borderWidth:3}
+]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#C9C2E6',padding:14,font:{size:11}}},tooltip:{backgroundColor:'#100B22',titleColor:'#42E8F2',bodyColor:'#C9C2E6',borderColor:'rgba(196,177,255,0.28)',borderWidth:1,padding:12,callbacks:{title:function(c){return c[0].raw.name;},label:function(c){return c.raw.detail;}}},datalabels:{color:'#fff',font:{size:10,weight:'600'},formatter:function(v){return v.name;},align:'top',offset:6,textStrokeColor:'#05040F',textStrokeWidth:3},annotation:{annotations:{vuoto:{type:'box',xMin:7,xMax:10,yMin:0.5,yMax:4.5,backgroundColor:'rgba(66,232,242,.04)',borderColor:'rgba(66,232,242,.5)',borderWidth:2,borderDash:[6,4],label:{display:true,content:'VUOTO DI MERCATO',position:'start',color:'#42E8F2',font:{size:11,weight:'bold'}}}}}},scales:{x:{title:{display:true,text:'INTERATTIVITA (passivo → personalizzato 1:1)',color:'#C9C2E6',font:{size:11,weight:'600'}},min:0,max:10,grid:{color:'rgba(196,177,255,0.1)'},ticks:{color:'#8F87B3',font:{size:10}}},y:{title:{display:true,text:'PREZZO (basso → alto)',color:'#C9C2E6',font:{size:11,weight:'600'}},min:0,max:10,grid:{color:'rgba(196,177,255,0.1)'},ticks:{color:'#8F87B3',font:{size:10}}}}}});}
+</script>
+<script>
+var q2Done=false;function initQ2(){if(q2Done)return;q2Done=true;
+new Chart(document.getElementById('q2'),{type:'bubble',data:{datasets:[
+{label:'Gratuiti',data:[{x:9,y:4.5,r:12,name:'The Bull (podcast)',detail:'Gratuito, 300+ ep, non personalizzato'},{x:9,y:5.5,r:9,name:'Paolo Coletti',detail:'Gratuito, corso strutturato YT'},{x:8.5,y:2,r:8,name:'Mr RIP',detail:'Gratuito, blog FIRE tecnico'}],backgroundColor:'rgba(143,135,179,.6)',borderColor:'#8F87B3'},
+{label:'Corsi a pagamento',data:[{x:3,y:8,r:11,name:'Marco Casario',detail:'3.000€, molto profondo ma costoso'},{x:4,y:7,r:10,name:'Moneysurfers',detail:'Fino a 2.595€, percorso completo'},{x:2,y:6.5,r:13,name:'Alfio Bardolla',detail:'Caro, piu motivazionale che tecnico'},{x:3.5,y:8.5,r:11,name:'Affari Miei',detail:'1.497€+, strutturato e pratico'}],backgroundColor:'rgba(93,140,255,.65)',borderColor:'#5D8CFF'},
+{label:'Segnali operativi',data:[{x:5.5,y:2.5,r:9,name:'NowTrade',detail:'29,99€/m, operativo non educativo'},{x:4.5,y:3.5,r:9,name:'Trading Library',detail:'67€/m, segnali senza formazione'},{x:3.5,y:3,r:8,name:'TendenzaMercati',detail:'Segnali Forex, pricing nascosto'}],backgroundColor:'rgba(255,95,138,.6)',borderColor:'#FF5F8A'},
+{label:'Consulenza',data:[{x:2,y:9,r:11,name:'IoInvesto SCF',detail:'Profondissimo ma caro (0,7–1% AUM)'},{x:4.5,y:6,r:10,name:'Moneyfarm',detail:'Automatizzato, profondita media'},{x:3,y:8.5,r:11,name:'Plannix (Lixi)',detail:'290–4.900€+, profondo, fee-only flat'}],backgroundColor:'rgba(155,108,255,.6)',borderColor:'#9B6CFF'},
+{label:'The Bull + Clonyo',data:[{x:8,y:8.5,r:18,name:'CLONYO',detail:'€9,99–29,99/m: profondo+accessibile+personale'}],backgroundColor:'rgba(66,232,242,.8)',borderColor:'#42E8F2',borderWidth:3}
+]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#C9C2E6',padding:14,font:{size:11}}},tooltip:{backgroundColor:'#100B22',titleColor:'#42E8F2',bodyColor:'#C9C2E6',borderColor:'rgba(196,177,255,0.28)',borderWidth:1,padding:12,callbacks:{title:function(c){return c[0].raw.name;},label:function(c){return c.raw.detail;}}},datalabels:{color:'#fff',font:{size:10,weight:'600'},formatter:function(v){return v.name;},align:'top',offset:6,textStrokeColor:'#05040F',textStrokeWidth:3},annotation:{annotations:{opp:{type:'box',xMin:6.5,xMax:9.5,yMin:7,yMax:9.5,backgroundColor:'rgba(66,232,242,.04)',borderColor:'rgba(66,232,242,.5)',borderWidth:2,borderDash:[6,4],label:{display:true,content:'PROFONDO + ACCESSIBILE',position:'start',color:'#42E8F2',font:{size:11,weight:'bold'}}}}}},scales:{x:{title:{display:true,text:'ACCESSIBILITA PREZZO (caro → economico)',color:'#C9C2E6',font:{size:11,weight:'600'}},min:0,max:10,grid:{color:'rgba(196,177,255,0.1)'},ticks:{color:'#8F87B3',font:{size:10}}},y:{title:{display:true,text:'PROFONDITA CONTENUTO (superficiale → approfondito)',color:'#C9C2E6',font:{size:11,weight:'600'}},min:0,max:10,grid:{color:'rgba(196,177,255,0.1)'},ticks:{color:'#8F87B3',font:{size:10}}}}}});}
+</script>
+<script>
+var cvDone=false;function initConv(){if(cvDone)return;cvDone=true;
+new Chart(document.getElementById('convChart'),{type:'bar',data:{labels:['Conservativo (0,5%)','Medio (1%)','Ottimistico (2%)'],datasets:[{label:'MRR',data:[37475,74950,149900],backgroundColor:['rgba(143,135,179,0.7)','rgba(123,77,255,0.8)','rgba(66,232,242,0.8)'],borderColor:['#8F87B3','#7B4DFF','#42E8F2'],borderWidth:1,borderRadius:8,barThickness:48}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},datalabels:{color:'#fff',font:{size:12,weight:'700'},anchor:'end',align:'top',formatter:function(v){return '€'+(v/1000).toFixed(0)+'k';}},tooltip:{backgroundColor:'#100B22',bodyColor:'#C9C2E6',borderColor:'rgba(196,177,255,0.28)',borderWidth:1,callbacks:{label:function(c){return '€'+c.raw.toLocaleString('it-IT')+'/mese';}}}},scales:{x:{grid:{display:false},ticks:{color:'#C9C2E6',font:{size:10}}},y:{grid:{color:'rgba(196,177,255,0.1)'},ticks:{color:'#8F87B3',font:{size:10},callback:function(v){return '€'+(v/1000)+'k';}}}}}}); }
+</script>
 </body>
 </html>
